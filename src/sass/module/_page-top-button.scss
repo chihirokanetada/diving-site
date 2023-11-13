@@ -1,0 +1,17 @@
+@use "global" as *;
+
+.page-top-button {
+  position: fixed;
+  z-index: 2;
+  height: rem(48);
+  width: rem(48);
+  right: rem(15);
+  bottom: rem(15);
+  cursor: pointer;
+  @include mq("md") {
+    right:  rem(20);
+    bottom: rem(20);
+    width: rem(80);
+    height: rem(80);
+  }
+}

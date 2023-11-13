@@ -1,0 +1,128 @@
+@use "global" as *;
+
+.campaign-card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 2px 2px 10px  rgba(0,0,0,0.25);
+  color: $black;
+}
+
+
+.campaign-card__body-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-top: rem(16);
+  padding-bottom: rem(16);
+  padding-left: rem(16);
+  padding-right: rem(24);
+  @include mq("md") {
+    padding-top: rem(24);
+    padding-bottom: rem(40);
+  }
+}
+
+.swiper-slide img {
+  height: auto;
+  width: 100%;
+}
+
+.campaign-card__img {
+  aspect-ratio : 288/188;
+  @include mq("md") {
+    aspect-ratio : 334/223;
+  }
+}
+
+.campaign-card__img source,
+.campaign-card__img img {
+  width: 100%;
+  height: 100%;
+	object-fit: cover;
+  transition: .6s;
+}
+
+.campaign-card__category {
+  display: inline-block;
+  font-size: rem(12);
+  line-height: calc((22/12));
+  color: $green;
+  border: 1px solid $green;
+  padding: rem(4) rem(12);
+  @include mq("md") {
+    padding: rem(6) rem(16);
+  }
+}
+
+.campaign-card__title {
+  margin-top: rem(4);
+  margin-bottom: rem(8);
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: calc(24/16);
+  color: $black;
+}
+
+.campaign-card__body-bottom {
+  border-top: 1px solid $green;
+}
+
+.campaign-card__text {
+  margin-top: rem(8);
+  font-size: rem(14);
+  line-height: calc(24/14);
+  text-align: center;
+  color: $black;
+  @include mq("md") {
+    margin-top: rem(16);
+    font-size: rem(16);
+    line-height: calc(24/16);
+  }
+}
+
+.campaign-card__price-wrap {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-family: $second-font-family;
+  margin-top: rem(7.8);
+  margin-left: rem(20.8);
+  margin-right: rem(12.8);
+  @include mq("md") {
+    margin-top: rem(7.8);
+    margin-left: rem(24);
+    margin-right: rem(24);
+  }
+}
+
+.campaign-card__discount {
+  margin-top: rem(10);
+  margin-bottom: rem(2);
+  font-size: rem (20);
+  font-weight: $bold;
+  line-height: 1;
+  justify-content: center;
+  text-align: center;
+  text-decoration: line-through 3px solid $red;
+  @include mq("md") {
+    margin-top: rem(14);
+    font-size: rem(24);
+  }
+}
+
+.campaign-card__discount span {
+  color: $black;
+}
+
+.campaign-card__price {
+  font-size: rem(32);
+  line-height: 1;
+  color: $green;
+  @include mq("md") {
+    font-size: rem(40);
+  }
+}
+

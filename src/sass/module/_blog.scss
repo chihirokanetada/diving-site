@@ -1,0 +1,69 @@
+@use "global" as *;
+
+.blog {
+  @include mq("md") {
+    background-image:url(../images/common/blog-background.jpg);
+    background-position: center bottom;
+    background-size: cover;
+    width: 100%;
+    height: rem(500);
+  }
+}
+
+.blog__inner {
+  margin-left: rem(6);
+  margin-right: rem(6);
+}
+
+.blog__title {
+  @include mq("md") {
+    color: $white;
+    position: relative;
+  }
+}
+
+.blog__maintitle,
+.blog__maintitle span,
+.blog__subtitle {
+  @include mq("md") {
+    color: $white;
+  }
+}
+
+.blog__subtitle {
+  margin-top: rem(4);
+  @include mq("md") {
+    margin-top: rem(8);
+  }
+}
+
+.blog__fish {
+  @include mq("md") {
+    position: absolute;
+    top: -116%;
+    left: -7.1%;
+    content: url(../images/common/blog-fish.png);
+    max-width: rem(437);
+    width: 100%;
+  }
+}
+
+.blog__cards {
+  margin-top: rem(27.2);
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}
+
+
+.blog__button-wrap {
+  align-items: center;
+}
+
+.blog__button {
+  text-align: center;
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(76.8);
+  }
+}
