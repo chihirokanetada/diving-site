@@ -23,18 +23,22 @@
   }
 }
 
-.contact__fish {
+.contact__wrap::before {
   position: absolute;
-  top: -4.4%;
-  right: 0;
-  content: url(../images/common/contact-sp-fish.png);
-  width: 100%;
-  max-width: rem(109);
-    @include mq("md") {
-    top: -9.8%;
-    right: -12%;
-    content: url(../images/common/contact-pc-fish.png);
-    max-width: rem(301);
+  content: "";
+  top: rem(-26);
+  right: calc(35% - min(35.7vw, 50rem));
+  width: rem(109);
+  height: rem(50);
+  background-image: url(../images/common/contact-pc-fish.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include mq(md) {
+    background-image: url(../images/common/contact-sp-fish.png);
+    right: calc(50% - min(48.7vw, 42rem));
+    width: rem(301);
+    height: rem(138);
+    top: rem(-48);
   }
 }
 
@@ -129,6 +133,7 @@
 }
 
 .contact__body {
+  position: relative;
   margin-top: rem(30);
   @include mq("md") {
     margin-bottom: rem(20);

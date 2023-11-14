@@ -39,14 +39,14 @@ jQuery(function ($) {
   }
 
   // スワイパー（MV）
-  const swiper1 = new Swiper('.js-mv-swiper', {
+ const swiper1 = new Swiper('.js-mv-swiper', {
     loop: true,
     effect: "fade",
     speed: 2000,
     allowTouchMove: false,
-    autoplay: {
-      delay: 2000,
-    },
+    // autoplay: {
+    //   delay: 2000,
+    // },
   });
 
   // スワイパー(campaign)
@@ -58,9 +58,9 @@ jQuery(function ($) {
     // maxBackfaceHiddenSlides:8,
     width: 280,
     speed: 1500,
-    autoplay: {
-    disableOnInteraction: false,
-    },
+    // autoplay: {
+    // disableOnInteraction: false,
+    // },
     allowTouchMove: true,
     breakpoints: {
     768: {
@@ -75,48 +75,102 @@ jQuery(function ($) {
 });
 });
 
-// ページトップボタン
-$(function () {
-const pageTop = $(".js-page-top");
-pageTop.hide();
-$(window).scroll(function () {
-  if ($(this).scrollTop() > 100) {
-    pageTop.fadeIn();
-  } else {
-    pageTop.fadeOut();
-  }
-});
-pageTop.click(function () {
-  $("body,html").animate(
-    {
-      scrollTop: 0,
-    },
-    500
-  );
-  return false;
-});
+// // ページトップボタン
+// $(function () {
+// const pageTop = $(".js-page-top");
+// pageTop.hide();
+// $(window).scroll(function () {
+//   if ($(this).scrollTop() > 100) {
+//     pageTop.fadeIn();
+//   } else {
+//     pageTop.fadeOut();
+//   }
+// });
+// pageTop.click(function () {
+//   $("body,html").animate(
+//     {
+//       scrollTop: 0,
+//     },
+//     500
+//   );
+//   return false;
+// });
 
-// フッター手前でストップ
-$(".js-page-top").hide();
-$(window).on("scroll", function () {
-  scrollHeight = $(document).height();
-  scrollPosition = $(window).height() + $(window).scrollTop();
-  footHeight = $(".footer").innerHeight();
-  if (scrollHeight - scrollPosition <= footHeight) {
+// // フッター手前でストップ
+// $(".js-page-top").hide();
+// $(window).on("scroll", function () {
+//   scrollHeight = $(document).height();
+//   scrollPosition = $(window).height() + $(window).scrollTop();
+//   footHeight = $(".footer").innerHeight();
+//   if (scrollHeight - scrollPosition <= footHeight) {
 
-// ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
-    $(".js-page-top").css({
-      position: "absolute",
-      bottom: footHeight+ 20,
+// // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
+//     $(".js-page-top").css({
+//       position: "absolute",
+//       bottom: footHeight+ 20,
+//     });
+//   } else {
+//     $(".js-page-top").css({
+//       position: "fixed",
+//       bottom: "20px",
+//     });
+//   }
+// });
+// });
+
+
+ // ページトップ
+  const pageTop = $(".js-page-top");
+  pageTop.hide();
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+     // 100pxスクロールしたら発火
+     pageTop.fadeIn(); // 100px以上スクロールしたらボタンをフェードイン
+    } else {
+     pageTop.fadeOut(); // 100px以下になったらボタンをフェードアウト
+    }
+  });
+  pageTop.click(function () {
+    $("body,html").animate(
+      {
+        scrollTop: 0,
+      },
+     500 // 500ミリ秒かけてページトップに戻る
+      );
+      return false;
     });
-  } else {
-    $(".js-page-top").css({
-      position: "fixed",
-      bottom: "20px",
+
+$(document).ready(function () {
+  let scrollHeight, scrollPosition, footHeight;
+  $("#page-top").hide();
+  $(window).on("scroll", function () {
+    scrollHeight = $(document).height();
+    scrollPosition = $(window).height() + $(window).scrollTop();
+    footHeight = $("footer").innerHeight();
+
+    if (scrollHeight - scrollPosition <= footHeight) {
+      $("#page-top").css({
+        position: "absolute",
+        bottom: footHeight + 20,
+      });
+    } else {
+      $("#page-top").css({
+        position: "fixed",
+        bottom: "20px",
+      });
+    }
+  });
+
+  $("#page-top").click(function () {
+    $("body,html").animate(
+      {
+        scrollTop: 0,
+      },
+      400
+      );
+      return false;
     });
-  }
-});
-});
+  });
 
 
 //要素の取得とスピードの設定

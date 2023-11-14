@@ -11,41 +11,44 @@
   position: relative;
 }
 
-.mv__slider {
+.mv__slider,
+.mv__slider .swiper-wrapper,
+.mv__slider .swiper-slide {
   height: inherit;
 }
 
-.swiper-wrapper {
-  height: inherit;
-}
+// .swiper-slide {
+//   display: flex;
+//   justify-content: center; /* 左右の中央揃え */
+//   width: 100%;
+// }
 
-.swiper-slide {
-  display: flex;
-  justify-content: center; /* 左右の中央揃え */
-  height: inherit;
-  width: 100%;
-}
-
-.swiper-slide img ,
-.swiper-slide picture {
-  width: 100%;
-  height: inherit;
+.mv__slider .swiper-slide img ,
+.mv__slider .swiper-slide picture {
+  aspect-ratio: 375 / 667;
   object-fit: cover;
+  height: inherit;
+  @include mq(md) {
+    aspect-ratio: 1440 / 768;
+  }
 }
 
 .mv__title-wrap {
   position: absolute;
   width: 100%;
-  top: 42%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   font-family: $second-font-family;
   font-weight: $regular;
   margin-inline: auto;
   text-align: center;
   color: $white;
+  line-height: calc(28 / 28);
   z-index: 10;
-  margin-top: rem(8);
   @include mq("md") {
-    margin-top: 0;
+    top: 50%;
+    left: 50%;
   }
 }
 
@@ -54,13 +57,12 @@
   letter-spacing: 0.54em;
   font-family: $second-font-family;
   font-weight: $regular;
+  text-indent: 0.54em;
   text-align: center;
   text-transform:uppercase;
-  margin-left: rem(21);
   @include mq("md") {
     font-size: rem(80);
-    line-height: calc(100/80);
-    margin-left: rem(56);
+    line-height: calc(100 / 80);
   }
 }
 
@@ -68,4 +70,5 @@
   font-size: rem(20);
   font-family: $base-font-family;
   font-weight: $regular;
+  margin-top: rem(10);
 }
