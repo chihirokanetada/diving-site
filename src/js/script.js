@@ -44,9 +44,9 @@ jQuery(function ($) {
     effect: "fade",
     speed: 2000,
     allowTouchMove: false,
-    // autoplay: {
-    //   delay: 2000,
-    // },
+    autoplay: {
+      delay: 2000,
+    },
   });
 
   // スワイパー(campaign)
@@ -58,9 +58,9 @@ jQuery(function ($) {
     // maxBackfaceHiddenSlides:8,
     width: 280,
     speed: 1500,
-    // autoplay: {
-    // disableOnInteraction: false,
-    // },
+    autoplay: {
+    disableOnInteraction: false,
+    },
     allowTouchMove: true,
     breakpoints: {
     768: {
@@ -74,49 +74,6 @@ jQuery(function ($) {
   },
 });
 });
-
-// // ページトップボタン
-// $(function () {
-// const pageTop = $(".js-page-top");
-// pageTop.hide();
-// $(window).scroll(function () {
-//   if ($(this).scrollTop() > 100) {
-//     pageTop.fadeIn();
-//   } else {
-//     pageTop.fadeOut();
-//   }
-// });
-// pageTop.click(function () {
-//   $("body,html").animate(
-//     {
-//       scrollTop: 0,
-//     },
-//     500
-//   );
-//   return false;
-// });
-
-// // フッター手前でストップ
-// $(".js-page-top").hide();
-// $(window).on("scroll", function () {
-//   scrollHeight = $(document).height();
-//   scrollPosition = $(window).height() + $(window).scrollTop();
-//   footHeight = $(".footer").innerHeight();
-//   if (scrollHeight - scrollPosition <= footHeight) {
-
-// // ページトップボタンがフッター手前に来たらpositionとfixedからabsoluteに変更
-//     $(".js-page-top").css({
-//       position: "absolute",
-//       bottom: footHeight+ 20,
-//     });
-//   } else {
-//     $(".js-page-top").css({
-//       position: "fixed",
-//       bottom: "20px",
-//     });
-//   }
-// });
-// });
 
 
  // ページトップ
