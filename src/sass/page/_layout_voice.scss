@@ -3,8 +3,11 @@
 .voice__inner {
   padding-top: rem(83);
   padding-bottom: rem(83);
+  width: 100%;
+  max-width: rem(600);
+  margin-inline: auto;
   @include mq("md") {
-    padding-top: rem(470.4);
+    padding-top: rem(140);
     padding-bottom: rem(144.16);
   }
 }

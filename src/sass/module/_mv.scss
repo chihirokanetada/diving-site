@@ -17,12 +17,6 @@
   height: inherit;
 }
 
-// .swiper-slide {
-//   display: flex;
-//   justify-content: center; /* 左右の中央揃え */
-//   width: 100%;
-// }
-
 .mv__slider .swiper-slide img ,
 .mv__slider .swiper-slide picture {
   aspect-ratio: 375 / 667;
@@ -55,7 +49,7 @@
 .mv__title {
   font-size: rem(40);
   letter-spacing: 0.54em;
-  font-family: $second-font-family;
+  font-family: $third-font-family;
   font-weight: $regular;
   text-indent: 0.54em;
   text-align: center;
@@ -68,7 +62,7 @@
 
 .mv__sub-title {
   font-size: rem(20);
-  font-family: $base-font-family;
+  font-family: $second-font-family;
   font-weight: $regular;
   margin-top: rem(10);
 }

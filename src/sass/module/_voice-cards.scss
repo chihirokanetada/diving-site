@@ -2,7 +2,7 @@
 
 
 .voice-cards {
-  display:grid;
+  display: grid;
 	grid-template-columns: repeat(1, 1fr);
 	row-gap: rem(37);
 	width: 100%;
@@ -17,3 +17,4 @@
 .voice-cards__item {
   display: block;
 }
+

@@ -39,10 +39,9 @@
   }
 }
 
-// .header__logo a {
-//   height: inherit;
-//   align-items: center;
-// }
+.header__logo:hover {
+  opacity: 0.6;
+}
 
 .header__logo img {
   width: 100%;
@@ -50,6 +49,9 @@
   object-fit: contain;
 }
 
+
+/* PCヘッダーナビ
+***************************************************************/
 .header__nav {
   height: inherit;
 }
@@ -63,7 +65,6 @@
 .header__nav-item {
   height: inherit;
 }
-
 
 .header__nav-item a {
   display: block;
@@ -84,7 +85,6 @@
 .header__nav-items li a{
   position: relative;
 }
-
 
 .header__nav-items li a:hover{
   color:$white;
@@ -118,8 +118,12 @@
   line-height: calc(15/10);
 }
 
+.header__nav-item a:hover {
+  opacity: 0.6;
+}
 
-
+/* ハンバーガー
+***************************************************************/
 .header__hamburger {
   position: fixed;
   z-index: 9999;
@@ -132,7 +136,6 @@
     display: none;
   }
 }
-
 
 .header__hamburger span {
   position: absolute;
@@ -170,7 +173,6 @@
   background-color: $white;
 }
 
-
 .header__hamburger.is-open span:nth-of-type(1) {
   top: rem(12);
   transform: rotate(35deg);
@@ -185,6 +187,9 @@
   transform: rotate(-35deg);
 }
 
+
+/* ドロワー
+***************************************************************/
 .header__drawer {
   padding-top: rem(104);
   display: none;
@@ -232,9 +237,6 @@
   grid-column: 2 / 3;
 }
 
-
-
-
 .header-drawer__list {
   margin-top: rem(36.16);
 }
@@ -268,4 +270,9 @@
   line-height: calc(18/16);
   margin-top: rem(24);
   margin-left: rem(24);
+}
+
+.header-drawer__title:hover,
+.header-drawer__subtitle:hover {
+  opacity: 0.6;
 }

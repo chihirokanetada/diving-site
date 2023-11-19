@@ -6,6 +6,7 @@
 
 .section-title__main {
   font-size: rem(32);
+  font-family: $second-font-family;
   line-height: calc(40/32);
   color: $black;
   @include mq("md") {
@@ -15,12 +16,14 @@
 }
 
 .section-title__main--green {
+  font-family: $second-font-family;
   color: $green;
 }
 
 .section-title__large {
   font-size: rem(80);
   font-weight: $regular;
+  font-family: $second-font-family;
   line-height: 1;
   color: $black;
 }
@@ -34,6 +37,7 @@
 }
 
 .section-title__large--green {
+  font-family: $second-font-family;
   color: $green;
 }
 

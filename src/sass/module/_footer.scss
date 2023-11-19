@@ -70,6 +70,15 @@ font-family: 'Noto Sans Jp';
   }
 }
 
+.footer__logo img:hover,
+.footer-nav__title:hover,
+.footer-nav__subtitle:hover,
+.footer__sns-facebook:hover,
+.footer__sns-instagram:hover {
+  opacity: 0.6;
+}
+
+
 .footer-nav__wrap1,
 .footer-nav__wrap2,
 .footer-nav__wrap3,
@@ -123,7 +132,6 @@ font-family: 'Noto Sans Jp';
   margin-top: rem(36.8);
   @include mq("md") {
     margin-top: rem(35.2);
-
   }
 }
 

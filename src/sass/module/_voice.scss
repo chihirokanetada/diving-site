@@ -4,23 +4,26 @@
   background-color: $white;
 }
 
-.voice__title{
-  @include mq("md") {
-    position: relative;
-  }
+.voice__title {
+  position: relative;
 }
 
-.voice__fish {
+.voice__title::before {
+  display: none;
   @include mq("md") {
+    display: inline-block;
+    content: "";
     position: absolute;
-    top: -184%;
-    left: -7.5%;
-    content: url(../images/common/voice-fish.png);
-    max-width: rem(301);
+    top: rem(-118);
+    left: calc(50% - min(48.7vw, 39.9rem));
     width: 100%;
+    max-width: rem(301);
+    height: rem(138);
+    background-image: url(../images/common/voice-fish.png);
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
-
 
 .voice__subtitle {
   margin-top: rem(4);
@@ -32,11 +35,9 @@
 .voice__cards {
   margin-top: rem(43.2);
   @include mq("md") {
-    display: flex;
     margin-top: rem(28.64);
   }
 }
-
 
 .voice__button {
   text-align: center;
@@ -47,14 +48,20 @@
   }
 }
 
-
-.voice__tatu {
+.voice__button::before  {
+  display: none;
   @include mq("md") {
     position: absolute;
-    bottom: -120%;
-    right: 0;
-    content: url(../images/common/voice-tatu.png);
+    display: inline-block;
+    content: "";
+    top: rem(-36);
+    right: calc(59% - min(54.7vw, 39.9rem));
     width: 100%;
     max-width: rem(71);
+    height: rem(162);
+    background-image: url(../images/common/voice-tatu.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
   }
 }

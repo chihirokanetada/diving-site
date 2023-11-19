@@ -15,6 +15,10 @@
   }
 }
 
+.blog-card:hover {
+  opacity: 0.7;
+}
+
 .blog-card__img {
   margin-inline: auto;
   aspect-ratio : 301 / 201;
@@ -42,7 +46,8 @@
 }
 
 .blog-card__date {
-  font-size: rem(12)
+  font-size: rem(12);
+  font-family: $second-font-family;
 }
 
 .blog-card__title {

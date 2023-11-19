@@ -82,6 +82,7 @@
 
 .aboutus__decoration {
   font-size: rem(40);
+  font-family: $second-font-family;
   line-height: 1;
   color: $green;
   text-align: left;
@@ -102,11 +103,11 @@
   line-height: calc(24/16);
   color: $black;
   margin-top: rem(19);
-  width: 100%;
-  max-width: rem(400);
   @include mq("md") {
     color: $white;
     margin-top: 0;
+    width: 100%;
+    max-width: rem(400);
   }
 }
 

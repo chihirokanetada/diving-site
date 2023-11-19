@@ -37,7 +37,6 @@
   }
 }
 
-.campaign-card__img source,
 .campaign-card__img img {
   width: 100%;
   height: 100%;
@@ -48,6 +47,7 @@
 .campaign-card__category {
   display: inline-block;
   font-size: rem(12);
+  font-family: $third-font-family;
   line-height: calc((22/12));
   color: $green;
   border: 1px solid $green;
@@ -87,7 +87,7 @@
   display: flex;
   justify-content: space-between;
   text-align: center;
-  font-family: $second-font-family;
+  font-family: $third-font-family;
   margin-top: rem(7.8);
   margin-right: rem(12.8);
   @include mq("md") {
