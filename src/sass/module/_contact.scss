@@ -56,22 +56,18 @@
   display: inline-block;
   border-bottom: 1px solid $green;
   width: 100%;
-  max-width: rem(295);
+  max-width: rem(174);
   padding-bottom: rem(5);
   text-align: -webkit-center;
   @include mq("md") {
-    max-width: rem(440);
+    max-width: rem(200);
     padding-bottom: rem(6);
   }
 }
 
 .contact__logo  img {
   width: 100%;
-  height: 100%;
-  max-width: rem(174);
-  @include mq("md") {
-    max-width: rem(200);
-  }
+  height: auto;
 }
 
 .contact__info {

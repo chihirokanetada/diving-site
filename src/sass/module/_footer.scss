@@ -1,8 +1,13 @@
 @use "global" as *;
 
 .footer {
-background-color: $green;
-font-family: 'Noto Sans Jp';
+  background-color: $green;
+  font-family: 'Noto Sans Jp';
+}
+
+.footer__inner {
+  margin-inline: auto;
+  width: 100%;
 }
 
 .footer__top {
@@ -13,18 +18,16 @@ font-family: 'Noto Sans Jp';
   }
 }
 
-.footer__logo {
-  display: block;
-  @include mq("md") {
-  }
+.footer__logo a {
+  display: inline-block;
 }
 
 .footer__logo img {
   width: 100%;
-  height: 100%;
+  height: auto;
   max-width: rem(120);
   @include mq("md") {
-    max-width: rem(256);
+    max-width: rem(200);
   }
 }
 
@@ -41,7 +44,7 @@ font-family: 'Noto Sans Jp';
 
 .footer__sns img {
   width: 100%;
-  height: 100%;
+  height: auto;
   max-width: rem(24);
   @include mq("md") {
     max-width: rem(30);

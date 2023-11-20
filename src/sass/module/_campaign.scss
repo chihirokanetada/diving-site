@@ -4,11 +4,24 @@
   position: relative;
 }
 
+.campaign__slider {
+  margin-top: rem(16);
+  margin-right: calc(50% - 50vw);
+  padding: rem(5) rem(0);
+  @include mq("md") {
+    margin-top: rem(32);
+  }
+}
+
 .campaign__title {
   @include mq("md") {
     display: table;
     margin-inline : auto;
   }
+}
+
+.campaign-card {
+  flex: 1;
 }
 
 .campaign__slider.swiper {
@@ -28,6 +41,11 @@
 
 .campaign__slider.swiper {
   position: relative;
+}
+
+.swiper-slide img {
+  height: auto;
+  width: 100%;
 }
 
 .swiper-wrapper {

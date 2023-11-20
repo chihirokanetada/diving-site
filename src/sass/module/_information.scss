@@ -19,12 +19,18 @@
   aspect-ratio : 345/227;
   @include mq("md") {
     max-width: calc(540 / 1080) * 100%;
+    aspect-ratio : 540/356;
   }
 }
 
-.information__img img {
+.information__image img {
+  width: 100%;
+  height: auto;
   aspect-ratio: 345/227;
   object-fit: cover;
+  @include mq("md") {
+    aspect-ratio : 540/356;
+  }
 }
 
 .information__box {
