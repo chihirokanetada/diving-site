@@ -11,23 +11,24 @@
   margin-inline: auto;
   box-shadow: 2px 2px 10px  rgba(0,0,0,0.25);
   @include mq("md") {
-    padding: rem(24);
+    padding-top: rem(24);
+    padding-bottom: rem(24);
+    padding-left: rem(27);
+    padding-right: rem(24);
     width: 100%;
     max-width: rem(520);
   }
-
 }
 
 .voice-card__content {
   display: flex;
-  gap: rem(13);
-  @include mq("md") {
-    gap: rem(15);
-  }
+  justify-content: space-around;
 }
 
 .voice-card__info {
   border-bottom: 1px solid $green;
+  width: 100%;
+  max-width: rem(276);
 }
 
 .voice-card__info-wrap {
@@ -92,11 +93,9 @@
   width: 100%;
 	height: 100%;
   aspect-ratio: 151 / 117;
-  max-width: rem(151);
 	object-fit: cover;
   @include mq("md") {
     aspect-ratio: 180 / 140;
-    max-width: rem(180);
   }
 }
 

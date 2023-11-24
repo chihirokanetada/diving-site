@@ -48,15 +48,13 @@
     right: calc(50% - min(48.7vw, 42rem));
     width: rem(301);
     height: rem(138);
-    top: rem(-48);
+    top: rem(-32);
   }
 }
 
 .contact__content {
-  margin-top: rem(32);
   @include mq("md") {
     border-right: 1px solid $green;
-    margin-top: rem(0);
     padding-right: rem(82);
   }
 }
@@ -79,8 +77,8 @@
 }
 
 .contact__info {
-  margin-top: rem(11);
   @include mq("md") {
+    margin-top: rem(11);
     display: flex;
     justify-content: space-between;
     padding-top: rem(20);

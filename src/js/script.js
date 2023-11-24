@@ -31,13 +31,11 @@ jQuery(function ($) {
     loop: true,
     loopAdditionalSlides: 4,
     loopedSlides: 8,
-    // maxBackfaceHiddenSlides:8,
     width: 280,
     speed: 3000,
-
-    // autoplay: {
-    //   disableOnInteraction: false,
-    // },
+    autoplay: {
+      disableOnInteraction: false,
+    },
     allowTouchMove: true,
     breakpoints: {
       768: {

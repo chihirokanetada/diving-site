@@ -7,9 +7,9 @@
 .campaign__slider {
   margin-top: rem(24);
   margin-right: calc(50% - 50vw);
-  padding: rem(1) rem(0);
+  padding: rem(5) rem(0);
   @include mq("md") {
-    margin-top: rem(40);
+    margin-top: rem(32);
   }
 }
 
@@ -42,7 +42,7 @@
 .campaign__button-before.swiper-button-prev,
 .swiper-rtl .campaign__button-next.swiper-button-next {
   @include mq("md") {
-    left: 76.5%;
+    left: 77%;
   }
 }
 
@@ -80,7 +80,7 @@
 
 .campaign__button {
 	text-align: center;
-	margin-top: rem(46);
+	margin-top: rem(40);
 	@include mq("md") {
 		margin-top: rem(80);
   }

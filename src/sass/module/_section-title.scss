@@ -51,7 +51,7 @@
 }
 
 .section-title.section-title--contact .section-title__main {
-  margin-top: 0;
+  margin-top: rem(-16);
 }
 
 .section-title.section-title--white,
@@ -71,4 +71,9 @@
   @include mq("md") {
     color: $white;
   }
+}
+
+
+.section-title.section-title--aboutus span {
+  text-transform: none;
 }

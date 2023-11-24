@@ -28,6 +28,7 @@
 .nav__list {
   -webkit-overflow-scrolling: touch;
   overflow: auto;
+  margin-top: rem(37);
 }
 
 .nav__logo a {
@@ -47,7 +48,7 @@
   display: inline-block;
   display: flex;
   width: 100%;
-  margin-top: rem(16);
+  margin-top: rem(8);
   @include mq("md") {
     margin-top: rem(32);
     margin-left: rem(43);

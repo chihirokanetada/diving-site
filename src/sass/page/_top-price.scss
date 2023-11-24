@@ -3,7 +3,6 @@
 .top-price {
   margin-top: rem(83);
   padding: rem(80) 0;
-  background-color: $blue;
   @include mq("md") {
     margin-top: rem(140);
     padding: rem(100) 0;
