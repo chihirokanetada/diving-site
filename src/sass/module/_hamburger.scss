@@ -1,0 +1,66 @@
+@use "global" as *;
+
+/* ハンバーガー
+***************************************************************/
+.header__hamburger {
+  position: fixed;
+  z-index: 9999;
+  top: rem(40);
+  right: rem(15);
+  width: rem(32);
+  height: rem(40);
+  cursor: pointer;
+  @include mq(md) {
+    display: none;
+  }
+}
+
+.header__hamburger span {
+  position: absolute;
+  display: inline-block;
+  left: 0;
+  width: 100%;
+  height: rem(1);
+  background-color: $white;
+  transition: 0.3s transform, 0.3s opacity;
+}
+
+.header__hamburger span:nth-of-type(1) {
+  top: rem(-12);
+}
+
+.header__hamburger span:nth-of-type(2) {
+  top: 0;
+}
+
+.header__hamburger span:nth-of-type(3) {
+  top: rem(12);
+}
+
+.header__hamburger.is-open {
+  position: fixed;
+  z-index: 9999;
+  top: rem(28);
+  right: rem(15);
+  width: rem(36);
+  height: rem(24);
+  cursor: pointer;
+}
+
+.hamburger.is-open span {
+  background-color: $white;
+}
+
+.header__hamburger.is-open span:nth-of-type(1) {
+  top: rem(12);
+  transform: rotate(35deg);
+}
+
+.header__hamburger.is-open span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.header__hamburger.is-open span:nth-of-type(3) {
+  top: rem(12);
+  transform: rotate(-35deg);
+}

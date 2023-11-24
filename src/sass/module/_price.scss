@@ -1,5 +1,10 @@
 @use "global" as *;
 
+.price {
+  background-color: $blue;
+  color: $black;
+}
+
 .price__body {
   margin-top: rem(25.6);
   width: 100%;
@@ -90,8 +95,6 @@
 }
 
 .price__button {
-  display: flex;
-  justify-content: center;
   text-align: center;
   margin-top: rem(37);
   @include mq("md") {

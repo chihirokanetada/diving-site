@@ -5,33 +5,16 @@
 }
 
 .campaign__slider {
-  margin-top: rem(16);
+  margin-top: rem(24);
   margin-right: calc(50% - 50vw);
-  padding: rem(5) rem(0);
+  padding: rem(1) rem(0);
   @include mq("md") {
-    margin-top: rem(32);
+    margin-top: rem(40);
   }
-}
-
-.campaign__title {
-  @include mq("md") {
-    display: table;
-    margin-inline : auto;
-  }
-}
-
-.campaign-card {
-  flex: 1;
-}
-
-.campaign__slider.swiper {
-  margin-right: calc(50% - 50vw);
-  overflow: hidden;
 }
 
 .campaign__slider.swiper-wrapper {
   margin-right: calc(50% - 50vw);
-  overflow: hidden;
   padding: rem(5) rem(5);
 }
 
@@ -41,15 +24,6 @@
 
 .campaign__slider.swiper {
   position: relative;
-}
-
-.swiper-slide img {
-  height: auto;
-  width: 100%;
-}
-
-.swiper-wrapper {
-  padding: rem(5) rem(0);
 }
 
 .campaign__button-before.swiper-button-prev,
@@ -67,7 +41,7 @@
 
 .campaign__button-before.swiper-button-prev,
 .swiper-rtl .campaign__button-next.swiper-button-next {
-  @include mq(md) {
+  @include mq("md") {
     left: 76.5%;
   }
 }
@@ -75,7 +49,7 @@
 .campaign__button-before.swiper-button-prev:after,
 .campaign__button-next.swiper-button-next:after {
   display: none;
-  @include mq(md) {
+  @include mq("md") {
     content: "";
     display: inline-block;
     background-repeat: no-repeat;
@@ -87,28 +61,21 @@
 }
 
 .campaign__button-before.swiper-button-prev:after {
-  @include mq(md) {
+  @include mq("md") {
     background-image: url(../images/common/Campaign-before-button.png);
   }
 }
 
 .campaign__button-next.swiper-button-next:after {
-  @include mq(md) {
+  @include mq("md") {
     background-image: url(../images/common/Campaign-next-button.png);
   }
 }
 
 .campaign__button-before.swiper-button-prev:hover::after,
 .campaign__button-next.swiper-button-next:hover::after {
-  opacity: 0.7;
-}
-
-.campaign__cards {
-  margin-top: rem(27);
-  display: flex;
-  @include mq("md") {
-    margin-top: rem(40);
-  }
+  opacity: 0.6;
+  transition: 0.5s;
 }
 
 .campaign__button {
@@ -119,4 +86,6 @@
   }
 }
 
-
+.swiper-wrapper{
+  display: flex;
+}

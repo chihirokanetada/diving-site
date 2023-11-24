@@ -1,5 +1,13 @@
 @use "global" as *;
 
+
+.aboutus__inner {
+  max-width: rem(600);
+  @include mq("md") {
+    max-width: $inner;
+  }
+}
+
 .aboutus__container {
   margin-top: rem(51);
   @include mq("md") {
@@ -33,7 +41,7 @@
   aspect-ratio: 128 / 194;
   width: 100%;
   height: 100%;
-  max-width: 37%;
+  max-width: calc(128 / 345) * 100%;
   margin-top: rem(-24);
   @include mq("md") {
     aspect-ratio: 404 / 606;
@@ -43,45 +51,40 @@
 
 .aboutus__image-left img {
   aspect-ratio: 128 / 194;
-  width: 100%;
-  height: auto;
   object-fit: cover;
-  @include mq("md") {
-    aspect-ratio: 404 / 606;
-  }
 }
 
 .aboutus__image-right {
-  aspect-ratio: 281 / 186;
-  width: 100%;
+  z-index: -1;
+  position: relative;
+  aspect-ratio: 281/186;
   height: 100%;
+  width: 100%;
   margin-left: -19%;
   max-width: calc(281 / 345) * 100%;
-  z-index: -1;
   @include mq("md") {
-    aspect-ratio: 880 / 581;
+    aspect-ratio: 880/581;
     max-width: calc(880 / 1080) * 100%;
   }
 }
 
 .aboutus__image-right img {
   aspect-ratio: 281 / 186;
-  @include mq(md) {
+  @include mq("md") {
     aspect-ratio: 880 / 581;
   }
 }
 
 .aboutus__text-container {
-  display: flex;
-  flex-direction: column;
   @include mq("md") {
-    flex-direction: row;
+    display: flex;
     gap: rem(40);
-    margin-left: 18.45%;
-    margin-top: -42.5%;
-    top: auto;
-    left: auto;
-    transform: none;
+    position: absolute;
+    top: 41%;
+    left: 57%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: rem(840);
   }
 }
 
@@ -90,7 +93,6 @@
   font-family: $second-font-family;
   line-height: 1;
   color: $green;
-  text-align: left;
   margin-top: rem(40);
   max-width: rem(200);
   @include mq("md") {
@@ -103,6 +105,7 @@
 }
 
 .aboutus__text {
+  width: 100%;
   font-size: rem(16);
   font-weight: $regular;
   line-height: calc(24/16);
@@ -111,7 +114,6 @@
   @include mq("md") {
     color: $white;
     margin-top: 0;
-    width: 100%;
     max-width: rem(400);
   }
 }
@@ -120,6 +122,6 @@
   text-align: center;
   margin-top: rem(22.4);
   @include mq("md") {
-    margin-top: rem(37.5);
+    margin-top: rem(40);
   }
 }

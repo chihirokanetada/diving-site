@@ -2,58 +2,73 @@
 
 .section-title {
   text-align: center;
+  color: $black;
 }
 
-.section-title__main {
+.section-title span {
+  display: block;
   font-size: rem(32);
+  line-height: calc(40 / 32);
+  font-weight: $regular;
   font-family: $second-font-family;
-  line-height: calc(40/32);
+  text-transform: capitalize;
   color: $black;
   @include mq("md") {
     font-size: rem(40);
-    line-height: 1;
+    line-height: calc(40 / 40);
   }
 }
 
-.section-title__main--green {
-  font-family: $second-font-family;
+.section-title span::first-letter {
   color: $green;
 }
 
-.section-title__large {
-  font-size: rem(80);
-  font-weight: $regular;
-  font-family: $second-font-family;
-  line-height: 1;
-  color: $black;
-}
 
-.section-title__largesub {
+.section-title__main {
   font-size: rem(12);
-  color: $green;
-  @include mq("md") {
-    line-height: calc(18/12);
-  }
-}
-
-.section-title__large--green {
-  font-family: $second-font-family;
-  color: $green;
-}
-
-.section-title__sab {
-  font-size: rem(12);
-  line-height: calc(18/12);
-  color: $green;
+  line-height: calc(18 / 12);
   margin-top: rem(4);
-  @include mq("md") {
+  font-family:$base-font-family;
+  font-weight: $regular;
+  color: $green;
+  @include mq(md) {
     margin-top: rem(8);
   }
 }
 
-.section-title__main--white,
-.section-title__sab--white {
-  color: $white;
+
+.section-title.section-title--contact {
+  font-size: rem(80);
+  line-height: calc(1 / 1);
+  text-shadow: 0 rem(4) rem(4) rgba($black, 0.2);
+  @include mq("md") {
+    text-shadow: none;
+  }
 }
 
+.section-title.section-title--contact span {
+  font-size: rem(80);
+}
 
+.section-title.section-title--contact .section-title__main {
+  margin-top: 0;
+}
+
+.section-title.section-title--white,
+.section-title.section-title--white span {
+  @include mq("md") {
+    color: $white;
+  }
+}
+
+.section-title.section-title--white span::first-letter {
+  @include mq("md") {
+    color: $white;
+  }
+}
+
+.section-title__main.section-title__main--white {
+  @include mq("md") {
+    color: $white;
+  }
+}

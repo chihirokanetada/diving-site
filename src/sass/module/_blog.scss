@@ -50,6 +50,7 @@
   padding-right: rem(200);
   margin-right: auto;
   margin-left: auto;
+  margin-inline: auto;
   @include mq("md") {
     max-width: $inner + strip-unit($padding-pc) * 2;
     padding-right: $padding-pc;

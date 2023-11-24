@@ -1,13 +1,10 @@
 @use "global" as *;
 
-.aboutus__inner {
+.top-aboutus {
   margin-top: rem(85);
   margin-bottom: rem(74);
-  width: 100%;
-  max-width: rem(600);
   @include mq("md") {
     margin-top: rem(140);
     margin-bottom: rem(384);
-    max-width: $inner;
   }
 }

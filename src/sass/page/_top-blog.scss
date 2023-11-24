@@ -1,12 +1,8 @@
 @use "global" as *;
 
-.blog {
+.top-blog {
   padding-top: rem(80);
-  width: 100%;
-  max-width: rem(600);
-  margin-inline: auto;
   @include mq("md") {
     padding-top: rem(100);
-    max-width: 100%
   }
 }
