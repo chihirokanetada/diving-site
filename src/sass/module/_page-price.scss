@@ -1,0 +1,122 @@
+@use "global" as *;
+
+.page-price {
+  position: relative;
+}
+
+.page-price::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: rem(-32);
+  left: calc(50% - min(48.7vw, 39.9rem));
+  width: 100%;
+  max-width: rem(120);
+  height: rem(55);
+  background-image: url(../images/common/page-sp-fish.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include mq("md") {
+    top: rem(-118);
+    left: calc(50% - min(48.7vw, 50rem));
+    max-width: rem(301);
+    height: rem(138);
+    background-image: url(../images/common/page-pc-fish.png);
+  }
+}
+
+.page-faq__inner {
+  margin: auto;
+  width: 100%;
+  max-width: rem(600);
+  @include mq("md") {
+    max-width: rem(1200);
+  }
+}
+
+.page-price__lists {
+  width: 100%;
+  height: 100%;
+  margin-inline: auto;
+}
+
+.page-price__list {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  @include mq("md") {
+    display: flex;
+  }
+}
+
+.page-price__list:not(:first-child) {
+  margin-top: rem(40);
+  @include mq("md") {
+    margin-top: rem(80);
+  }
+}
+
+.price-list__head {
+  color: $white;
+  background-color: $green;
+  font-size: rem(16);
+  font-weight: $bold;
+  line-height: calc(24 / 16);
+  margin-left: rem(8);
+  height: rem(40);
+}
+
+.price-list__icon {
+  display: block;
+  width: 100%;
+  // アイコンのスペースを確保したpadding-leftを設定する
+  // margin-left: rem(8);
+  padding-left: rem(8);
+  position: relative;
+  // 折り返しの対応
+  overflow-wrap: break-word;
+}
+
+.price-list__icon::before {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 20px;
+  position: absolute;
+  left: 30%;
+  // top: 50%;と、transform: translateY(-50%) で上下中央に配置
+  top: 50%;
+  transform: translateY(-50%);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../images/common/page-price-icon-sp.svg);
+  @include mq("md") {
+    background-image: url(../images/common/page-price-icon-pc.svg);
+  }
+}
+
+.price-list__title {
+  border: 1px solid $green;
+  @include mq("md") {
+    padding: rem(18) rem(15);
+  }
+}
+
+.price-list__price {
+  border: 1px solid $green;
+}
+
+.price-list__title,
+.price-list__price {
+  height: rem(60);
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,45 @@
+@use "global" as *;
+
+
+// ページナビ
+.pagination {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 rem(12);
+  list-style-type: none;
+  padding: 0;
+	margin-top: rem(80);
+}
+
+.pagination a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: rem(16);
+	font-weight: $bold;
+	font-family: $third-font-family;
+	width: rem(38);
+	height: rem(38);
+	border: 1px solid $green;
+	color: $green;
+}
+
+.pagination a:not(:hover) {
+	text-decoration: none;
+}
+
+.pagination .current a {
+	background-color: $green;
+	color: $white;
+	pointer-events: none;
+	margin-left: rem(28);
+}
+
+.pagination .next a {
+	margin-left: rem(28);
+}
+
+.pagination-detail .next a {
+	margin-left: rem(70);
+}

@@ -1,0 +1,88 @@
+@use "global" as *;
+
+/* パンくず
+***************************************************************/
+.breadcrumb-white {
+  padding-top: rem(80);
+  background-color: $green;
+  color: $white;
+  @include mq("md") {
+    padding-top: rem(90);
+  }
+}
+
+.breadcrumb-white span {
+  font-size: rem(14);
+  color: $white;
+}
+
+.breadcrumb-white__current-item {
+  color: $white;
+}
+
+/* ４０４
+***************************************************************/
+.page-404 {
+  background-color: $green;
+  text-align: center;
+  padding-top: rem(80);
+  z-index: -1;
+  position: relative;
+  @include mq("md") {
+    padding-top: rem(147);
+  }
+}
+
+.page-404::after  {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;/*幅*/
+  height:rem(345);/*どれだけデカくなってもはみ出ないであろう高さを指定*/
+  background-image: url(../images/common/shark-sp.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding-right: rem(15);
+  padding-left: rem(15);
+  @include mq("md") {
+    background-image: url(../images/common/shark-pc.png);
+    height: rem(698);
+    // left: calc(50% - min(48.7vw, 43.6.9rem));
+  }
+}
+
+.page-404__title {
+  font-size: rem(80);
+  letter-spacing: 0.5em;
+  font-family: $third-font-family;
+  font-weight: $regular;
+  color: $white;
+  text-indent: 0.5em;
+  @include mq("md") {
+    font-size: rem(160);
+  }
+}
+
+.page-404__text {
+  font-size: rem(16);
+  line-height: calc(24 /16);
+  font-weight: $third-font-family;
+  text-align: center;
+  color: $white;
+  @include mq("md") {
+    margin-top: rem(20);
+  }
+}
+
+.page-404__button {
+  text-align: center;
+  padding-top: rem(40);
+  padding-bottom: rem(40);
+  @include mq("md") {
+    padding-top: rem(80);
+    padding-bottom: rem(148);
+  }
+}
+

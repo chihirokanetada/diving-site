@@ -3,11 +3,18 @@
 .blog-cards {
   display: grid;
 	grid-template-columns: repeat(1, 1fr);
-	row-gap: rem(35);
+	gap: rem(40);
 	width: 100%;
 	@include mq("md") {
 		grid-template-columns: repeat(3, 1fr);
-		gap: rem(40) rem(40);
+		row-gap: rem(80);
 		max-width: $inner;
   }
 }
+
+.blog-cards.blog-cards--archive {
+	@include mq("md") {
+		grid-template-columns: repeat(2, 1fr);
+  }
+}
+

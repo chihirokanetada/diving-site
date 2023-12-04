@@ -2,6 +2,7 @@
 
 .information__body {
   margin-top: rem(27);
+  width: 100%;
   max-width: rem(600);
   margin-inline: auto;
   @include mq("md") {

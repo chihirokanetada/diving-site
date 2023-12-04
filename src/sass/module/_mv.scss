@@ -52,7 +52,7 @@
   font-family: $third-font-family;
   font-weight: $regular;
   text-indent: 0.54em;
-  text-transform:uppercase;
+  text-transform: uppercase;
   @include mq("md") {
     font-size: rem(80);
     line-height: calc(100 / 80);

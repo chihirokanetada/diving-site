@@ -1,0 +1,129 @@
+@use "global" as *;
+
+
+.page-campaign  {
+  position: relative;
+}
+
+.page-campaign::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: rem(-32);
+  left: calc(50% - min(48.7vw, 39.9rem));
+  width: 100%;
+  max-width: rem(120);
+  height: rem(55);
+  background-image: url(../images/common/page-sp-fish.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  @include mq("md") {
+    top: rem(-118);
+    left: calc(50% - min(48.7vw, 50rem));
+    max-width: rem(301);
+    height: rem(138);
+    background-image: url(../images/common/page-pc-fish.png);
+  }
+}
+
+.page-campaign__inner {
+	margin: auto;
+	width: 100%;
+	max-width: rem(600);
+	@include mq("md"){
+		max-width: rem(1200);
+	}
+}
+
+.tab-items {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: rem(21);
+	row-gap: rem(16);
+	@include mq("md") {
+		display: flex;
+		justify-content:flex-start;
+		gap: rem(32);
+  }
+}
+
+.tab-items__item {
+	font-size: rem(14);
+	line-height: calc(22 /14);
+	color: $green;
+	border: 1px solid $green;
+	min-width: rem(100);
+	width: fit-content;
+	flex-basis: rem(158);
+	padding-top: rem(8);
+	padding-bottom: rem(8);
+	padding-left: rem(16);
+	padding-right: rem(16);
+	text-align: center;
+	cursor: pointer;
+}
+
+.page-campaign__cards {
+	margin-top: rem(40);
+	padding-right: rem(33);
+	padding-left: rem(33);
+	@include mq("md") {
+		padding: 0;
+  }
+}
+
+.tab-items__item.is-active {
+	color: $white;
+	background-color: $green;
+}
+
+.page-campaign-cards__card.is-active {
+	display: block;
+	animation: fade .3s;
+}
+
+@keyframes fade {
+	from {
+			opacity: 0;
+	}
+	to {
+			opacity: 1;
+	}
+}
+
+.campaign-card__text-box {
+	margin-top: rem(24);
+}
+
+.campaign-card__boxtext {
+	text-align: left;
+	font-size: rem(16);
+	line-height: calc(24 / 16);
+}
+
+.campaign-card__date {
+	display: block;
+	text-align: center;
+	font-size: rem(16);
+	line-height: calc(18 / 16);
+	font-family: $third-font-family;
+	font-weight: $bold;
+	margin-top: rem(32);
+	color: $green;
+}
+
+.campaign-card__contact {
+	text-align: center;
+	font-size: rem(14);
+	line-height: calc(18 / 14);
+	margin-top: rem(7);
+	color: $green;
+}
+
+.campaign-card__button {
+	text-align: center;
+	margin-top: rem(16);
+}
+
