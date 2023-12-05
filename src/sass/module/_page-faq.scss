@@ -1,13 +1,11 @@
 @use "global" as *;
 
-/* FAQ
-***************************************************************/
 .page-faq__inner {
   margin: auto;
   width: 100%;
   max-width: rem(600);
   @include mq("md") {
-    max-width: rem(1200);
+    max-width: rem(800);
   }
 }
 
@@ -77,12 +75,11 @@
 
 .page-faq-list__plus {
   position: absolute;
-  right: 16px;
+  right: rem(16);
   top: 0;
   height: 100%;
-  border-radius: 0px 10px 10px 0px;
   @include mq("md") {
-    right: 40px;
+    right: rem(40);
   }
 }
 
@@ -92,8 +89,8 @@
   content: "";
   background-color: $white;
   position: absolute;
-  width: 20px;
-  height: 1px;
+  width: rem(20);
+  height: rem(1);
   bottom: 50%;
   right: 50%;
   transform: translate(50%, 50%);
@@ -101,14 +98,13 @@
 }
 
 .page-faq-list__plus:before {
-  width: 1px;
-  height: 20px;
+  width: rem(1);
+  height: rem(20);
 }
 
 /*アコーディオンが開いたらプラスをマイナスにする*/
 .js-page-faq-question.selected .page-faq-list__plus:before {
   transform: translate(50%, 50%) rotate(90deg);
 }
-
 
 

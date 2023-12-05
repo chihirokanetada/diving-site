@@ -4,8 +4,15 @@
 .tab__menu {
 	margin-inline: auto;
 	width: 100%;
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	// display: grid;
+	// gap: rem(20);
+	// grid-template-columns: repeat(3, 1fr);
+	@include mq("md") {
+    // gap: rem(80);
+  }
 }
 
 .tab__menu-item {
@@ -13,20 +20,20 @@
 	position: relative;
 	font-size: rem(14);
 	line-height: 1.2;
-	width: 100%;
 	align-items: center;
 	justify-content: center;
 	padding-top: rem(10);
 	padding-bottom: rem(10);
 	min-width: rem(102);
-	width: fit-content;
+	max-width: rem(200);
+	width: 100%;
 	border: 1px solid $green;
 	background-color: $blue;
 	text-align: center;
 	color: $green;
 	cursor: pointer;
 	@include mq("md"){
-		margin-left: rem(10);
+		margin-left: rem(0);
 		font-size: rem(24);
 		text-align: right;
 		padding: rem(26) rem(30);
@@ -34,25 +41,12 @@
 	}
 }
 
-
-// .tab__menu-item  {
-// 	display: inline-block;
-// 	position: relative;
-// 	font-size: rem(14);
-// 	line-height: 1.2;
-// 	width: 100%;
-// 	@include mq("md") {
-// 		margin-left: rem(10);
-// 		font-size: rem(24);
-//   }
-// }
-
-// .tab__menu-item + .tab__menu-item {
-// 	margin-left: rem(19);
-// 	@include mq("md"){
-// 		margin-left: rem(90);
-// 	}
-// }
+.tab__menu-item + .tab__menu-item {
+	margin-left: rem(19);
+	@include mq("md"){
+		margin-left: rem(0);
+	}
+}
 
 .tab__menu-item.is-active {
 	color: $white;

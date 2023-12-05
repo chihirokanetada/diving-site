@@ -142,33 +142,31 @@ jQuery(function ($) {
     $(this).toggleClass('selected');
     $(this).next().slideToggle();
   });
-});
 
-// campaignとvoiceの上部のタブ
-$('.js-campaign-tab-item,.js-voice-tab-item').on('click', function () {
-  $('.js-campaign-tab-item').removeClass('is-active');
-  $('.js-campaign-tab-card').removeClass('is-active');
-  $(this).addClass('is-active');
+  // campaignとvoiceの上部のタブ
+  $('.js-campaign-tab-item,.js-voice-tab-item').on('click', function () {
+    $('.js-campaign-tab-item').removeClass('is-active');
+    $('.js-campaign-tab-card').removeClass('is-active');
+    $(this).addClass('is-active');
   var number = $(this).data("number");
-  $('#' + number).addClass('is-active');
-});
+    $('#' + number).addClass('is-active');
+  });
 
 // モーダル
-$("#main img").click(function() {
-  $(".gallery__display").html($(this).prop('outerHTML'));
-  $(".gallery__display").fadeIn(200);
-});
-$(".gallery__display, .gallery__display img").click(function() {
-  $(".gallery__display").fadeOut(200);
-});
+  $("#main img").click(function() {
+    $(".gallery__display").html($(this).prop('outerHTML'));
+    $(".gallery__display").fadeIn(200);
+  });
+  $(".gallery__display, .gallery__display img").click(function()  {
+    $(".gallery__display").fadeOut(200);
+  });
 
-// informationの上部のタブ
-$('.js-tab-menu').on('click', function () {
-  $('.js-tab-menu').removeClass('is-active');
-  $('.js-tab-content').removeClass('is-active');
-  $(this).addClass('is-active');
-  var number = $(this).data("number");
-  $('#' + number).addClass('is-active');
+  // informationの上部のタブ
+  $('.js-tab-menu').on('click', function () {
+    $('.js-tab-menu').removeClass('is-active');
+    $('.js-tab-content').removeClass('is-active');
+    $(this).addClass('is-active');
+    var number = $(this).data("number");
+    $('#' + number).addClass('is-active');
+  });
 });
-
-

@@ -29,10 +29,10 @@
 .page-campaign__inner {
 	margin: auto;
 	width: 100%;
-	max-width: rem(600);
+  max-width: rem(400);
 	@include mq("md"){
-		max-width: rem(1200);
-	}
+		max-width: $inner;
+  }
 }
 
 .tab-items {

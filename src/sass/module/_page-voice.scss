@@ -26,6 +26,14 @@
   }
 }
 
+.page-voice__inner {
+  width: 100%;
+  margin: auto;
+  max-width: rem(400);
+  @include mq("md") {
+    max-width: $inner;
+  }
+}
 
 .page-voice__cards {
 	margin-top: rem(40);
@@ -36,12 +44,13 @@
 	animation: fade .3s;
 }
 
+// アニメーションのキーフレーム（要素の不透明度を0から1に変化）を定義
 @keyframes fade {
 	from {
-			opacity: 0;
+    opacity: 0;
 	}
 	to {
-			opacity: 1;
+		opacity: 1;
 	}
 }
 

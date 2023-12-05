@@ -25,7 +25,7 @@
   }
 }
 
-.page-faq__inner {
+.page-price__inner {
   margin: auto;
   width: 100%;
   max-width: rem(600);
@@ -57,7 +57,7 @@
   }
 }
 
-.price-list__head {
+.page-price-list__head {
   color: $white;
   background-color: $green;
   font-size: rem(16);
@@ -67,7 +67,7 @@
   height: rem(40);
 }
 
-.price-list__icon {
+.page-price-list__icon {
   display: block;
   width: 100%;
   // アイコンのスペースを確保したpadding-leftを設定する
@@ -78,7 +78,7 @@
   overflow-wrap: break-word;
 }
 
-.price-list__icon::before {
+.page-price-list__icon::before {
   content: "";
   display: block;
   width: 22px;
@@ -97,19 +97,19 @@
   }
 }
 
-.price-list__title {
+.page-price-list__title {
   border: 1px solid $green;
   @include mq("md") {
     padding: rem(18) rem(15);
   }
 }
 
-.price-list__price {
+.page-price-list__page-price {
   border: 1px solid $green;
 }
 
-.price-list__title,
-.price-list__price {
+.page-price-list__title,
+.page-price-list__page-price {
   height: rem(60);
 }
 
