@@ -1,28 +1,7 @@
 @use "global" as *;
 
-
-/* パンくず
-***************************************************************/
 .breadcrumb {
-  font-size: rem(14);
-  color: $black;
-  margin-top: rem(8);
-}
-
-.breadcrumb-white {
-  padding-top: rem(80);
+  font-size: rem(16);
+  color: $white;
   background-color: $green;
-  color: $white;
-  @include mq("md") {
-    padding-top: rem(90);
-  }
-}
-
-.breadcrumb-white span {
-  font-size: rem(14);
-  color: $white;
-}
-
-.breadcrumb-white__current-item {
-  color: $white;
 }

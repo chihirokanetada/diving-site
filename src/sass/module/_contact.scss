@@ -4,19 +4,6 @@
   background-color: $white;
 }
 
-.contact__inner {
-  width: 100%;
-  padding-right: rem(40);
-  padding-left: rem(40);
-  margin-right: auto;
-  margin-left: auto;
-  @include mq("md") {
-    max-width: $inner + strip-unit($padding-pc) * 2;
-    padding-right: $padding-pc;
-    padding-left: $padding-pc;
-  }
-}
-
 .contact__wrap {
   position: relative;
   display: flex;
@@ -43,7 +30,7 @@
   background-image: url(../images/common/contact-pc-fish.png);
   background-repeat: no-repeat;
   background-size: contain;
-  @include mq(md) {
+  @include mq("md") {
     background-image: url(../images/common/contact-sp-fish.png);
     right: calc(50% - min(48.7vw, 42rem));
     width: rem(301);

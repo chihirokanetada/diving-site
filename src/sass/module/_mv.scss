@@ -22,7 +22,7 @@
   aspect-ratio: 375 / 667;
   object-fit: cover;
   height: inherit;
-  @include mq(md) {
+  @include mq("md") {
     aspect-ratio: 1440 / 768;
   }
 }

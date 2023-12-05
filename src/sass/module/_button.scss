@@ -74,7 +74,7 @@
   }
 }
 
-.button-white {
+.button--white {
   display: inline-block;
   position: relative;
   background-color: $white;
@@ -94,7 +94,7 @@
   cursor: pointer;
 }
 
-.button-white::before {
+.button--white::before {
   content: "";
   position: absolute;
   top: rem(4);
@@ -105,7 +105,7 @@
   z-index: -1;
 }
 
-.button-white::after {
+.button--white::after {
   content: "";
   position: absolute;
   transform: scale(0.5);
@@ -120,7 +120,7 @@
   z-index: -1;
 }
 
-.button-white span::after {
+.button--white span::after {
   content: url(../images/common/button-green.png);
   position: absolute;
   transform: scale(0.5);

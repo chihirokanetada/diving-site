@@ -56,7 +56,7 @@
 }
 
 .gallery-list__item:hover .gallery-list__item img {
-  @include mq(md){
+  @include mq("md") {
     transform: scale(1.2);
   }
 }

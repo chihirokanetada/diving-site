@@ -36,18 +36,6 @@
   }
 }
 
-
-/*利用規約
-***************************************************************/
-.terms-of-service__inner {
-  margin: auto;
-  max-width: rem(600);
-  width: 100%;
-  @include mq("md") {
-    max-width: rem(1200);
-  }
-}
-
 .terms-of-service__title {
   font-size: rem(24);
   font-weight: $medium;
@@ -90,14 +78,14 @@
 
 .terms-of-service__items {
   margin-top: rem(30);
-  @include mq(md){
+  @include mq("md") {
     margin-top: rem(40);
   }
 }
 
 .terms-of-service__item + .terms-of-service__item {
   margin-top: rem(20);
-  @include mq(md){
+  @include mq("md") {
     margin-top: rem(40);
   }
 }
@@ -116,12 +104,10 @@
   text-indent: rem(-15);
 }
 
-
 .terms-of-service__description-text + .terms-of-service__description-numbers,
 .terms-of-service__description-text + .terms-of-service__description-items {
   margin-top: rem(15);
 }
-
 
 .terms-of-service__description-item + .terms-of-service__description-item {
   margin-top: rem(15);

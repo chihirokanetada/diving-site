@@ -1,13 +1,5 @@
 @use "global" as *;
 
-
-.aboutus__inner {
-  max-width: rem(600);
-  @include mq("md") {
-    max-width: $inner;
-  }
-}
-
 .aboutus__container {
   margin-top: rem(51);
   @include mq("md") {
@@ -27,7 +19,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   display: none;
-  @include mq(md) {
+  @include mq("md") {
     display: inline-block;
   }
 }

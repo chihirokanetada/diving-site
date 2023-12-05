@@ -28,7 +28,6 @@
 
 .page-voice__inner {
   width: 100%;
-  margin: auto;
   max-width: rem(400);
   @include mq("md") {
     max-width: $inner;

@@ -129,7 +129,7 @@
   width: rem(32);
   height: rem(40);
   cursor: pointer;
-  @include mq(md) {
+  @include mq("md") {
     display: none;
   }
 }
@@ -197,7 +197,7 @@
   height: 100vh;
   background-color: $green;
   z-index: 8888;
-  @include mq(md) {
+  @include mq("md") {
     display: none;
   }
 }

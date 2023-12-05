@@ -25,14 +25,6 @@
   }
 }
 
-.page-information__inner {
-  margin: auto;
-  max-width: rem(600);
-  @include mq("md") {
-    max-width: $inner;
-  }
-}
-
 .page-information-item {
   @include mq("md") {
     width: 100%;

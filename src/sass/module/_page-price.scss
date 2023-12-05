@@ -25,15 +25,6 @@
   }
 }
 
-.page-price__inner {
-  margin-inline: auto;
-  width: 100%;
-  max-width: rem(600);
-  @include mq("md") {
-    max-width: rem(1200);
-  }
-}
-
 .page-price__lists {
   width: 100%;
   height: 100%;

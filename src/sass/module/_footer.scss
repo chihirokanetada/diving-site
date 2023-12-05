@@ -1,19 +1,17 @@
 @use "global" as *;
 
 .footer {
-  padding-top: rem(48);
-  padding-bottom: rem(56);
   background-color: $green;
   font-family: 'Noto Sans Jp';
+}
+
+.footer__inner {
+  padding-top: rem(48);
+  padding-bottom: rem(56);
   @include mq("md") {
     padding-top: rem(80);
     padding-bottom: rem(80);
   }
-}
-
-.footer__inner {
-  margin-inline: auto;
-  width: 100%;
 }
 
 .footer__nav {
@@ -22,7 +20,7 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  @include mq(md) {
+  @include mq("md") {
     max-width: rem(1080);
   }
 }
@@ -33,12 +31,12 @@
   font-size: rem(12);
   line-height: calc(18/12);
   font-weight: $regular;
-  font-family: "Gotu",sans-serif;;
+  font-family: "Gotu",sans-serif;
   color: $white;
   text-align: center;
-  @include mq(md){
+  @include mq("md") {
     margin-top: rem(76.8);
     font-size: rem(14);
-    line-height: calc(18/14);
+    line-height: calc(18 / 14);
   }
 }

@@ -4,7 +4,7 @@
   width: 100%;
   max-width: rem(400);
   margin: 0 auto;
-  @include mq(md) {
+  @include mq("md") {
     max-width: rem(1080);
   }
 }
@@ -26,7 +26,6 @@
 
 .nav__list {
   -webkit-overflow-scrolling: touch;
-  overflow: auto;
   margin-top: rem(37);
 }
 

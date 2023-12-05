@@ -1,16 +1,5 @@
 @use "global" as *;
 
-/* プライバシーポリシー
-***************************************************************/
-.privacy-policy__inner {
-  margin: auto;
-  max-width: rem(600);
-  width: 100%;
-  @include mq("md") {
-    max-width: rem(1000);
-  }
-}
-
 .privacy-policy__title {
   font-size: rem(24);
   font-weight: $medium;
@@ -53,14 +42,14 @@
 
 .privacy-policy__items {
   margin-top: rem(30);
-  @include mq(md){
+  @include mq("md") {
     margin-top: rem(40);
   }
 }
 
 .privacy-policy__item + .privacy-policy__item {
   margin-top: rem(20);
-  @include mq(md){
+  @include mq("md") {
     margin-top: rem(40);
   }
 }

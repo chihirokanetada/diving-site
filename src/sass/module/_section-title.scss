@@ -31,7 +31,7 @@
   font-family:$base-font-family;
   font-weight: $regular;
   color: $green;
-  @include mq(md) {
+  @include mq("md") {
     margin-top: rem(8);
   }
 }
@@ -72,7 +72,6 @@
     color: $white;
   }
 }
-
 
 .section-title.section-title--aboutus span {
   text-transform: none;
