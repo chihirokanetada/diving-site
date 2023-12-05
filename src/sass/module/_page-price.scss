@@ -26,7 +26,7 @@
 }
 
 .page-price__inner {
-  margin: auto;
+  margin-inline: auto;
   width: 100%;
   max-width: rem(600);
   @include mq("md") {
@@ -43,10 +43,18 @@
 .page-price__list {
   width: 100%;
   height: 100%;
-  text-align: center;
   border-collapse: collapse;
   @include mq("md") {
     display: flex;
+    justify-content: center;
+  }
+}
+
+.page-price__list thead {
+  @include mq("md") {
+    display: flex;
+    align-items: center;
+    background-color: $green;
   }
 }
 
@@ -65,24 +73,29 @@
   line-height: calc(24 / 16);
   margin-left: rem(8);
   height: rem(40);
+  @include mq("md") {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .page-price-list__icon {
   display: block;
   width: 100%;
   // アイコンのスペースを確保したpadding-leftを設定する
-  // margin-left: rem(8);
   padding-left: rem(8);
   position: relative;
-  // 折り返しの対応
-  overflow-wrap: break-word;
+  @include mq("md") {
+    padding-left: 0;
+    padding-bottom: 40%;
+  }
 }
 
 .page-price-list__icon::before {
   content: "";
   display: block;
-  width: 22px;
-  height: 20px;
+  width: rem(22);
+  height: rem(22);
   position: absolute;
   left: 30%;
   // top: 50%;と、transform: translateY(-50%) で上下中央に配置
@@ -94,14 +107,16 @@
   background-image: url(../images/common/page-price-icon-sp.svg);
   @include mq("md") {
     background-image: url(../images/common/page-price-icon-pc.svg);
+    width: rem(62);
+    height: rem(62);
+    top: 60%;
   }
 }
 
-.page-price-list__title {
+.page-price-list__title,
+.page-price-list__price {
   border: 1px solid $green;
-  @include mq("md") {
-    padding: rem(18) rem(15);
-  }
+  padding: rem(18) rem(15);
 }
 
 .page-price-list__page-price {
@@ -113,8 +128,30 @@
   height: rem(60);
 }
 
+.page-price-list__title{
+  text-align: center;
+  @include mq("md") {
+    text-align: left;
+  }
+}
 
+table thead tr {
+  @include mq("md") {
+    width: rem(200);
+  }
+}
+.page-price-list__title {
+  @include mq("md") {
+    width: rem(340);
+  }
+}
 
+.page-price-list__price {
+  text-align: right;
+  @include mq("md") {
+    width: rem(162);
+  }
+}
 
 
 
