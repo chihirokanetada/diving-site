@@ -138,21 +138,74 @@ jQuery(function ($) {
   });
 
   //  アコーディオン
-  $('.js-page-faq-question').click(function() {
-    $(this).toggleClass('selected');
-    $(this).next().slideToggle();
-  });
+  // $('.js-page-faq-question').click(function() {
+  //   $(this).toggleClass('selected');
+  //   $(this).next().slideToggle();
+  // });
+
+  $('.js-page-faq-question:first').addClass('selected');
+	$('.js-page-faq-question').click(function(){
+		$(this).toggleClass('selected');
+		$(this).next().slideToggle();
+	});
 
   // campaignとvoiceの上部のタブ
-  $('.js-campaign-tab-item,.js-voice-tab-item').on('click', function () {
-    $('.js-campaign-tab-item').removeClass('is-active');
-    $('.js-campaign-tab-card').removeClass('is-active');
-    $(this).addClass('is-active');
-  var number = $(this).data("number");
-    $('#' + number).addClass('is-active');
+  var newsLink = $(".page-campaign__tab li");
+	var limit = 6;
+	$(".page-campaign-cards__card").css('display','none');
+	for(var i = 0 ; i < limit ; i++) {
+		var limitNews = $(".page-campaign-cards__card")[i];
+		$(limitNews).fadeIn();
+	}
+	$(newsLink).click(function(){
+		$(newsLink).removeClass("active");
+		$(this).addClass("active");
+		var btnFilter = $(this).attr('data-filter');
+		if (btnFilter == 'campaign-tab01') {
+			$(".page-campaign-cards__card").css('display','none');
+			for(i = 0 ; i < limit ; i++) {
+				limitNews = $(".page-campaign-cards__card")[i];
+				$(limitNews).fadeIn();
+			}
+		} else {
+			$(".page-campaign-cards__card").css('display','none');
+			for(i = 0 ; i < limit ; i++) {
+				limitNews = $(".page-campaign-cards__card").filter('[data-category = "' + btnFilter + '"]')[i];
+				$(limitNews).fadeIn();
+			}
+		}
+	});
+});
+
+$(function() {
+  var newsLink = $(".page-voice__tab li");
+	var limit = 10;
+	$(".voice-cards__item").css('display','none');
+	for(var i = 0 ; i < limit ; i++) {
+		var limitNews = $(".voice-cards__item")[i];
+		$(limitNews).fadeIn();
+	}
+	$(newsLink).click(function(){
+		$(newsLink).removeClass("active");
+		$(this).addClass("active");
+		var btnFilter = $(this).attr('data-filter');
+		if (btnFilter == 'voice-tab01') {
+			$(".voice-cards__item").css('display','none');
+			for(i = 0 ; i < limit ; i++) {
+				limitNews = $(".voice-cards__item")[i];
+				$(limitNews).fadeIn();
+			}
+		} else {
+			$(".page-voice-cards__card").css('display','none');
+			for(i = 0 ; i < limit ; i++) {
+				limitNews = $(".page-voice-cards__card").filter('[data-category = "' + btnFilter + '"]')[i];
+				$(limitNews).fadeIn();
+			}
+		}
   });
 
-// モーダル
+   // モーダル
+$(function() {
   $("#main img").click(function() {
     $(".gallery__display").html($(this).prop('outerHTML'));
     $(".gallery__display").fadeIn(200);

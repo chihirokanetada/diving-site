@@ -92,15 +92,22 @@
 
 
 .nav__title,
-.nav__subtitle {
+.nav__title.nav__title--sub {
   display: block;
 }
 
 .nav__title:hover,
-.nav__subtitle:hover {
+.nav__title.nav__title--sub:hover {
   opacity: 0.6;
 }
 
+.nav__title--sub {
+  display: block;
+  font-size: rem(16);
+  line-height: calc(18/16);
+  margin-top: rem(23.3);
+  margin-left: rem(24);
+}
 
 .nav__wrap1,
 .nav__wrap2,
@@ -179,12 +186,4 @@
 .nav__title--newline {
   padding-left: 1.5em;
   text-indent: -1.5em;
-}
-
-.nav__subtitle {
-  display: block;
-  font-size: rem(16);
-  line-height: calc(18/16);
-  margin-top: rem(23.3);
-  margin-left: rem(24);
 }

@@ -31,6 +31,8 @@
   max-width: rem(102);
   width: 100%;
   z-index: 9999;
+  text-decoration: none;
+  transition: .3s;
   @include mq("md") {
     max-width: rem(133);
   }

@@ -69,6 +69,16 @@
   margin-top: rem(4);
   padding-bottom: rem(8);
   flex-grow: 1;
+  @include mq("md") {
+    padding-bottom: rem(1.6);
+  }
+}
+
+
+.campaign-card__title.campaign-card__title--sub{
+  @include mq("md") {
+    font-size: rem(24);
+  }
 }
 
 .campaign-card__text {

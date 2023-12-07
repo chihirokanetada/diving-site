@@ -25,6 +25,10 @@
 	color: $green;
 }
 
+.pagination a:hover {
+	opacity: 0.7;
+}
+
 .pagination a:not(:hover) {
 	text-decoration: none;
 }
@@ -42,4 +46,10 @@
 
 .pagination-detail .next a {
 	margin-left: rem(70);
+}
+
+.pagination .prev a:hover,
+.pagination .next a:hover {
+	background-color: $green;
+	color: $white;
 }

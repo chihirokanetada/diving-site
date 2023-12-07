@@ -16,22 +16,23 @@
   background-image: url(../images/common/page-sp-fish.png);
   background-repeat: no-repeat;
   background-size: contain;
+  z-index: -1;
   @include mq("md") {
-    top: rem(-118);
-    left: calc(50% - min(48.7vw, 50rem));
+    top: rem(-155);
+    left: calc(50% - min(48.7vw, 40rem));
     max-width: rem(301);
     height: rem(138);
     background-image: url(../images/common/page-pc-fish.png);
   }
 }
 
-.page-aboutus__inner {
-  margin: auto;
-  max-width: rem(600);
-  @include mq("md") {
-    max-width: $inner;
-  }
-}
+// .page-aboutus__inner {
+//   margin: auto;
+//   max-width: rem(600);
+//   @include mq("md") {
+//     max-width: $inner;
+//   }
+// }
 
 .page-aboutus__container {
   margin-top: rem(51);
@@ -76,7 +77,7 @@
   @include mq("md") {
     position: relative;
     aspect-ratio: 880 / 581;
-    max-width: calc(880 / 1080) * 100%;
+    max-width: 81.4%;
     margin-left: -19%;
   }
 }

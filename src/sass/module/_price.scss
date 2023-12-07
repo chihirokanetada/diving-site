@@ -11,25 +11,18 @@
   grid-template-columns: 1fr;
   row-gap: rem(40);
   margin-inline: auto;
-  // width: 100%;
-  // max-width: rem(600);
   @include mq("md") {
     grid-template-columns: 1fr 1fr;
     row-gap: 0;
     column-gap: rem(93);
     margin-top: rem(39);
-    // display: flex;
-    // flex-direction: row-reverse;
-    // max-width: rem(1400);
   }
 }
 
 .price__image {
   width: 100%;
   aspect-ratio: 345 / 227;
-  // max-width: rem(345);
   @include mq("md") {
-    // margin-left: rem(93);
     aspect-ratio: 746 / 492;
     max-width: rem(746);
     order: 2;
@@ -69,7 +62,7 @@
   }
 }
 
-.price-item__list {
+.price-item__list div {
   display: flex;
   justify-content: space-between;
   margin-top: rem(8);

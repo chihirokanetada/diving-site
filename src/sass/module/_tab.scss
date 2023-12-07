@@ -2,11 +2,11 @@
 
 // informationの上部のタブ
 .tab__menu {
-	margin-inline: auto;
-	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-inline: auto;
+	width: 100%;
 	// display: grid;
 	// gap: rem(20);
 	// grid-template-columns: repeat(3, 1fr);
@@ -31,6 +31,8 @@
 	background-color: $blue;
 	text-align: center;
 	color: $green;
+	text-decoration: none;
+	transition: .3s;
 	cursor: pointer;
 	@include mq("md"){
 		margin-left: rem(0);
@@ -53,6 +55,11 @@
 	background-color: $green;
 	box-shadow: rem(4) rem(4) rem(8) rgba($color: $green, $alpha: 0.25);
 }
+
+.tab__menu-item:hover {
+	opacity: 0.7;
+}
+
 
 .tab__menu-item::before {
   @include mq("md") {
@@ -110,14 +117,4 @@
 .tab__content-item.is-active {
 	display: block;
 	animation: fade .3s;
-}
-
-
-@keyframes fade {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
 }
