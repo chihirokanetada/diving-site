@@ -34,9 +34,13 @@
 }
 
 .page-contact-error__comment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: rem(14);
   color: $red;
-  text-align: center;
+  text-indent: -1em;
+  padding-left: 1em;
 }
 
 .page-contact-error__form {

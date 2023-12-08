@@ -23,7 +23,7 @@
   background-size: contain;
   z-index: -1;
   @include mq("md") {
-    top: rem(-118);
+    top: rem(-70);
     left: calc(50% - min(48.7vw, 40rem));
     max-width: rem(301);
     height: rem(138);

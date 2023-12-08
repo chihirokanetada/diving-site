@@ -83,7 +83,7 @@
 }
 
 .page-aboutus__image-right img {
-  // position: relative;
+  position: relative;
   aspect-ratio: 345 / 228;
   @include mq("md") {
     aspect-ratio: 880 / 581;

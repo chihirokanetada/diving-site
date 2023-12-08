@@ -14,7 +14,8 @@
     width: 100%;
     max-width: rem(301);
     height: rem(138);
-    background-image: url(../images/common/gallery-right.png);background-repeat: no-repeat;
+    background-image: url(../images/common/gallery-right.png);
+    background-repeat: no-repeat;
     background-size: contain;
     z-index: -1;
   }
@@ -24,38 +25,29 @@
   display: grid;
   gap: rem(8);
   margin-top: rem(40);
-  @include mq("md") {
-    grid-template-columns: repeat(11, 1fr);
-    grid-auto-flow: dense;
+  @include mq(md) {
     margin-top: rem(80);
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(11, 1fr);
   }
 }
 
-.gallery__list  {
+
+.gallery-list__item {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  @include mq(md) {
+  }
+}
+
+.gallery__list img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.gallery__image {
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  // @include mq("md") {
-  //   grid-column: span 5;
-  //   grid-row: span 1;
-  // }
-}
-
-// .gallery__image:nth-of-type(6n+1),
-// .gallery__image:nth-of-type(6n+6) {
-//   @include mq("md") {
-//     grid-column: span 4;
-//     grid-row: span 2;
-//   }
-// }
-
-.gallery__image:nth-of-type(6n+1) {
+.gallery-list__item:nth-of-type(6n+1) {
   aspect-ratio: 345 / 524;
   @include mq(md) {
     aspect-ratio: 492 / 746;
@@ -64,7 +56,7 @@
   }
 }
 
-.gallery__image:nth-of-type(6n+2) {
+.gallery-list__item:nth-of-type(6n+2) {
   aspect-ratio: 345/219;
   @include mq(md) {
     aspect-ratio: 580 / 369;
@@ -73,7 +65,7 @@
   }
 }
 
-.gallery__image:nth-of-type(6n+3) {
+.gallery-list__item:nth-of-type(6n+3) {
   aspect-ratio: 345/219;
   @include mq(md) {
     aspect-ratio: 580 / 369;
@@ -82,7 +74,7 @@
   }
 }
 
-.gallery__image:nth-of-type(6n+4) {
+.gallery-list__item:nth-of-type(6n+4) {
   aspect-ratio: 345/219;
   @include mq(md) {
     aspect-ratio: 580 / 369;
@@ -91,7 +83,7 @@
   }
 }
 
-.gallery__image:nth-of-type(6n+5) {
+.gallery-list__item:nth-of-type(6n+5) {
   aspect-ratio: 345/219;
   @include mq(md) {
     aspect-ratio: 580 / 369;
@@ -99,9 +91,8 @@
     grid-row: span 1;
   }
 }
-
-.gallery__image:nth-of-type(6n+6) {
-  aspect-ratio: 345 / 524;
+.gallery-list__item:nth-of-type(6n+6) {
+    aspect-ratio: 345 / 524;
   @include mq(md) {
     aspect-ratio: 746 / 492;
     grid-column: span 5;
@@ -121,7 +112,7 @@
   background: rgba(0, 0, 0, 0.8);
 }
 
-#grayDisplay  {
+#grayDisplay img {
   position: absolute;
   top: 0;
   bottom: 0;

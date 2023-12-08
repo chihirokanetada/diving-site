@@ -34,6 +34,19 @@
 	}
 }
 
+.tab__menu-item li.active,
+.tab__menu-item li:hover {
+	background: $green;
+	color: $white;
+}
+
+.tab__menu-item li.active:after,
+.tab__menu-item li:hover:after {
+	display: block;
+}
+
+
+
 .tab__menu-item.tab__menu-item--center {
 	@include mq("md") {
 		padding: rem(26) rem(16);

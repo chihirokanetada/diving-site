@@ -1,11 +1,23 @@
 @use "global" as *;
 
-.nav__lists.nav__lists--black {
-  color: $black;
+.page-sitemap  {
+  position: relative;
 }
 
-.nav__title-logo.nav__title-logo--black {
-  content: url(../images/common/black-hitode.png);
+.page-sitemap::before {
+  display: inline-block;
+  content: "";
+  position: absolute;
+  top: rem(-6);
+  left: calc(50% - min(47vw, 40rem));
+  width: 100%;
+  max-width: rem(120);
+  height: rem(55);
+  background-image: url(../images/common/page-sp-fish.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  @include mq("md") {
+    display: none;
+  }
 }
-
-

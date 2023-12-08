@@ -198,12 +198,8 @@ $(function() {
 		}
   });
 
-   // モーダル
-$(function() {
-  $(".gallery__image img").click(function () {
-    // まず、クリックした画像の HTML(<img>タグ全体)を#frayDisplay内にコピー
+  $(".gallery-list__item img").click(function () {
     $("#grayDisplay").html($(this).prop("outerHTML"));
-    //そして、fadeInで表示する。
     $("#grayDisplay").fadeIn(200);
     return false;
   });
@@ -214,7 +210,6 @@ $(function() {
   });
 });
 
-
   // informationの上部のタブ
   $('.js-tab-menu').on('click', function () {
     $('.js-tab-menu').removeClass('is-active');
@@ -223,4 +218,4 @@ $(function() {
     var number = $(this).data("number");
     $('#' + number).addClass('is-active');
   });
-});
+

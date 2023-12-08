@@ -23,10 +23,13 @@
 	height: rem(38);
 	border: 1px solid $green;
 	color: $green;
+	// background-color: $white;
+	transition: 0.3s;
 }
 
-.pagination a:hover {
+.pagination:hover {
 	opacity: 0.7;
+	// background-color: $green;
 }
 
 .pagination a:not(:hover) {
@@ -48,6 +51,7 @@
 	margin-left: rem(70);
 }
 
+.pagination  a:hover,
 .pagination .prev a:hover,
 .pagination .next a:hover {
 	background-color: $green;

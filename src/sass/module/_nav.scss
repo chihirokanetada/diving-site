@@ -84,11 +84,26 @@
   }
 }
 
+// sitemapで使用
+.nav__lists.nav__lists--black {
+  color: $black;
+  @include mq("md") {
+  column-gap: rem(144);
+  }
+}
+
+
 .nav__logo img:hover,
 .nav__sns-facebook:hover,
 .nav__sns-instagram:hover {
   opacity: 0.6;
 }
+
+// sitemapで使用
+.nav__title-logo.nav__title-logo--black {
+  content: url(../images/common/black-hitode.png);
+}
+
 
 
 .nav__title,
