@@ -18,8 +18,8 @@
   background-size: contain;
   z-index: -1;
   @include mq("md") {
-    top: rem(-118);
-    left: calc(50% - min(48.7vw, 50rem));
+    top: rem(-73);
+    left: calc(50% - min(47.7vw, 39rem));
     max-width: rem(301);
     height: rem(138);
     background-image: url(../images/common/blog-pc-left.png);
@@ -37,17 +37,17 @@
   @include mq("md") {
     margin-top: rem(0);
     margin-left: rem(80);
-    width: 27%;
+    width: 29%;
   }
 }
 
 .archive-blog__sidebar-item:not(:first-child) {
-  margin-top: rem(80);
+  margin-top: rem(82);
 }
 
 .archive-blog__list {
   @include mq("md") {
-    width: 73%;
+    width: 71%;
   }
 }
 
@@ -113,7 +113,8 @@
 .archive-blog__ranking-list,
 .archive-blog__voice-list,
 .archive-blog__tag-list,
-.archive-blog__archive-list {
+.archive-blog__archive-list,
+.archive-blog__tag-item {
   margin-top: rem(24);
 }
 
@@ -154,16 +155,15 @@
 /* 共通のスタイル */
 .archive-blog__triangle {
   background-color: $green;
-  height: 24px;
-  width: 24px;
+  height: rem(17);
+  width: rem(19);
 }
 
 .archive-blog__archive-link {
   margin-left: rem(8);
-}
-
-.archive-blog__archive-link a {
   font-size: rem(24);
+  font-family: $base-font-family;
+  font-weight: $regular;
 }
 
 .archive-blog__triangle.triangle-bottom {
@@ -171,8 +171,10 @@
 }
 
 .archive-blog__triangle.triangle-right,
-.archive-blog__triangle.triangle-right2, {
+.archive-blog__triangle.triangle-right2 {
   clip-path: polygon(0 0, 0 100%, 100% 50%);
+  height: rem(19);
+  width: rem(17);
 }
 
 .archive-blog__triangle.triangle-right {

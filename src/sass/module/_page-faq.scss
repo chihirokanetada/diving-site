@@ -25,7 +25,7 @@
   background-size: contain;
   z-index: -1;
   @include mq("md") {
-    top: rem(-118);
+    top: rem(-72);
     left: calc(50% - min(48.7vw, 40rem));
     max-width: rem(301);
     height: rem(138);
@@ -51,14 +51,14 @@
   padding-top: rem(16);
   padding: rem(16);
   padding-left: rem(16);
-  padding-right: rem(40);
+  padding-right: rem(48);
   position: relative;
   @include mq("md") {
     font-size: rem(20);
     padding-top: rem(26);
     padding-bottom: rem(26);
-    padding-left: rem(26);
-    padding-right: rem(64);
+    padding-left: rem(43);
+    padding-right: rem(80);
   }
 }
 
@@ -81,10 +81,10 @@
 .page-faq-list__plus {
   position: absolute;
   top: 0;
-  right: rem(16);
+  right: rem(27);
   height: 100%;
   @include mq("md") {
-    right: rem(40);
+    right: rem(56);
   }
 }
 
@@ -94,17 +94,30 @@
   content: "";
   background-color: $white;
   position: absolute;
-  width: rem(20);
+  width: rem(24);
   height: rem(1);
   bottom: 50%;
   right: 50%;
   transform: translate(50%, 50%);
   transition: 0.6s;
+  @include mq("md") {
+    // height: rem(30);
+  }
 }
+
+.page-faq-list__plus:after {
+  @include mq("md") {
+    width: rem(32);
+  }
+}
+
 
 .page-faq-list__plus:before {
   width: rem(1);
-  height: rem(20);
+  height: rem(24);
+  @include mq("md") {
+    height: rem(32);
+  }
 }
 
 /*アコーディオンが開いたらプラスをマイナスにする*/

@@ -8,7 +8,7 @@
   display: inline-block;
   content: "";
   position: absolute;
-  top: rem(-32);
+  top: rem(-28);
   left: calc(50% - min(44vw, 39.9rem));
   width: 100%;
   max-width: rem(120);
@@ -93,8 +93,8 @@
 .page-aboutus__sp-decoration {
   position: absolute;
   width: 100%;
-  top: 10%;
-  left: 10%;
+  top: 9%;
+  left: 7%;
   font-size: rem(40);
   font-family: $second-font-family;
   font-weight: $regular;

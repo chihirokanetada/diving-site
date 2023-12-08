@@ -18,7 +18,7 @@
   background-size: contain;
   z-index: -1;
   @include mq("md") {
-    top: rem(-118);
+    top: rem(-77);
     left: calc(50% - min(48.7vw, 40rem));
     max-width: rem(301);
     height: rem(138);
@@ -88,7 +88,7 @@
   display: block;
   width: 100%;
   // アイコンのスペースを確保したpadding-leftを設定する
-  padding-left: rem(8);
+  padding-left: rem(25);
   position: relative;
   @include mq("md") {
     padding-left: 0;
@@ -102,7 +102,7 @@
   width: rem(22);
   height: rem(22);
   position: absolute;
-  left: 30%;
+  left: 25%;
   // top: 50%;と、transform: translateY(-50%) で上下中央に配置
   top: 50%;
   transform: translateY(-50%);
@@ -115,46 +115,60 @@
     width: rem(62);
     height: rem(62);
     top: 60%;
+    left: 30%;
   }
+}
+
+.page-price-list__title {
+  text-align: center;
+  padding: rem(3);
+  width: 70%;
+  @include mq("md") {
+    text-align: left;
+    width: rem(340);
+  }
+  // @include mq("md") {
+  //   padding: rem(16) rem(15);
+  // }
+}
+// .page-price-list__title {
+//   @include mq("md") {
+//     width: rem(340);
+//   }
+// }
+
+// .page-price-list__price {
+//   text-align: right;
+//   @include mq("md") {
+//     width: rem(162);
+//   }
+// }
+
+.page-price-list__price {
+  border: 1px solid $green;
+  padding-right: rem(15);
+  width: 30%;
+  text-align: right;
+  @include mq("md") {
+    min-width: rem(162);
+  }
+  // @include mq("md") {
+  //   padding: rem(16) rem(15);
+  // }
 }
 
 .page-price-list__title,
 .page-price-list__price {
   border: 1px solid $green;
-  padding: rem(18) rem(15);
-}
-
-.page-price-list__page-price {
-  border: 1px solid $green;
-}
-
-.page-price-list__title,
-.page-price-list__page-price {
   height: rem(60);
-}
-
-.page-price-list__title{
-  text-align: center;
   @include mq("md") {
-    text-align: left;
+    height: rem(57);
   }
 }
 
 table thead tr {
   @include mq("md") {
     width: rem(200);
-  }
-}
-.page-price-list__title {
-  @include mq("md") {
-    width: rem(340);
-  }
-}
-
-.page-price-list__price {
-  text-align: right;
-  @include mq("md") {
-    width: rem(162);
   }
 }
 

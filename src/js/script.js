@@ -138,16 +138,10 @@ jQuery(function ($) {
   });
 
   //  アコーディオン
-  // $('.js-page-faq-question').click(function() {
-  //   $(this).toggleClass('selected');
-  //   $(this).next().slideToggle();
-  // });
-
-  $('.js-page-faq-question:first').addClass('selected');
-	$('.js-page-faq-question').click(function(){
-		$(this).toggleClass('selected');
-		$(this).next().slideToggle();
-	});
+  $('.js-page-faq-question').click(function() {
+    $(this).toggleClass('selected');
+    $(this).next().slideToggle();
+  });
 
   // campaignとvoiceの上部のタブ
   var newsLink = $(".page-campaign__tab li");
@@ -206,13 +200,20 @@ $(function() {
 
    // モーダル
 $(function() {
-  $("#main img").click(function() {
-    $(".gallery__display").html($(this).prop('outerHTML'));
-    $(".gallery__display").fadeIn(200);
+  $(".gallery__image img").click(function () {
+    // まず、クリックした画像の HTML(<img>タグ全体)を#frayDisplay内にコピー
+    $("#grayDisplay").html($(this).prop("outerHTML"));
+    //そして、fadeInで表示する。
+    $("#grayDisplay").fadeIn(200);
+    return false;
   });
-  $(".gallery__display, .gallery__display img").click(function()  {
-    $(".gallery__display").fadeOut(200);
+  $("#grayDisplay").click(function () {
+    // 非表示にする
+    $("#grayDisplay").fadeOut(200);
+    return false;
   });
+});
+
 
   // informationの上部のタブ
   $('.js-tab-menu').on('click', function () {
