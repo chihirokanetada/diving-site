@@ -247,4 +247,76 @@ jQuery(function ($) {
     var number = $(this).data("number");
     $('#' + number).addClass('is-active');
   });
+
+
+  // アーカイブアコーディオン
+  $(".side-menu__year.js-year").on("click", function () {
+    // クリックされた年に関連する月のリストを探し、スライドトグルで表示・非表示を切り替える
+    $(this).find(".js-month").slideToggle(200);
+    $(this).toggleClass("open");
+  });
+
+  // フッターのリンクがクリックされたときの処理
+  $(".nav__title--sub a").on("click", function () {
+    // console.log("Clicked!");
+    var targetHash = $(this).attr("href"); // クリックされたリンクのハッシュを取得
+    $(".js-tab-menu").removeClass("is-active");
+    $(".js-tab-content").removeClass("is-active");
+    $(targetHash).addClass("is-active");
+    $(".js-tab-menu [href='" + targetHash + "']").addClass("is-active");
+  });
+
+
+
+  // $(".nav__title--sub a").on("click", function (event) {
+  //   var targetHash = $(this).attr("href");
+  //   // Check if targetHash is "#" and prevent default behavior
+  //   if (targetHash === "#") {
+  //       event.preventDefault();
+  //       return;
+  //   }
+  //   $(".js-tab-menu").removeClass("is-active");
+  //   $(".js-tab-content").removeClass("is-active");
+  //   $(targetHash).addClass("is-active");
+  //   $(".js-tab-menu [href='" + targetHash + "']").addClass("is-active");
+  // });
+
+
+
+
+  // $(".nav__title--sub a").on("click", function (event) {
+  //   // Prevent default behavior for all anchor links
+  //   event.preventDefault();
+
+  //   // Get the href attribute of the clicked anchor
+  //   var targetHash = $(this).attr("href");
+
+  //   // Check if targetHash is "#" and return
+  //   if (targetHash === "#") {
+  //       return;
+  //   }
+
+  //   // Remove the "is-active" class from all menu items and content items
+  //   $(".js-tab-menu").removeClass("is-active");
+  //   $(".js-tab-content").removeClass("is-active");
+
+  //   // Add the "is-active" class to the clicked menu item and corresponding content item
+  //   $(this).addClass("is-active");
+  //   $(targetHash).addClass("is-active");
+  // });
+
+
+//   $(".nav__title--sub a").on("click", function (event) {
+//     event.preventDefault();
+
+//     var targetHash = $(this).attr("href");
+//     console.log("targetHash:", targetHash);
+//     if (targetHash === "#") {
+//       return;
+//   }
+//   $(".js-tab-menu").removeClass("is-active");
+//   $(".js-tab-content").removeClass("is-active");
+//   $(this).addClass("is-active");
+//   $(targetHash).addClass("is-active");
+// });
 });

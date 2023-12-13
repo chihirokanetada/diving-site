@@ -54,3 +54,10 @@
 	background-color: $green;
 	color: $white;
 }
+
+.pagination a.u-desktop {
+	display: block;
+  @include mq("md") {
+		display: none;
+  }
+}

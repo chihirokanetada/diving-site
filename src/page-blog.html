@@ -36,11 +36,11 @@
   <!-- ヘッダー -->
   <header class="header js-header">
     <div class="header__inner">
-      <h1 class="header__logo">
+      <div class="header__logo">
         <a href="./index.html">
           <img src="./assets/images/common/CodeUps-logo.png" alt="ロゴ">
         </a>
-      </h1>
+      </div>
       <!-- PCヘッダーナビ -->
       <nav class="header__nav u-desktop">
         <ul class="header__nav-items">
@@ -95,9 +95,9 @@
               <div class="nav__wrap2">
                 <ul class="nav__list">
                   <li class="nav__title"><a href="./page-information.html"><span class="nav__title-logo"></span>ダイビング情報</a></li>
-                  <li class="nav__title--sub"><a href="#">ライセンス講習</a></li>
-                  <li class="nav__title--sub"><a href="#">体験ダイビング</a></li>
-                  <li class="nav__title--sub"><a href="#">ファンダイビング</a></li>
+                  <li class="nav__title nav__title--sub"><a href="#">ライセンス講習</a></li>
+                  <li class="nav__title nav__title--sub"><a href="#">体験ダイビング</a></li>
+                  <li class="nav__title nav__title--sub"><a href="#">ファンダイビング</a></li>
                 </ul>
                 <ul class="nav__list">
                   <li class="nav__title"><a href="./page-blog.html"><span class="nav__title-logo"></span>ブログ</a></li>
@@ -273,10 +273,12 @@
           <aside class="archive-blog__sidebar side-menu">
             <div class="side-menu__list">
               <div class="side-menu__item">
-                <div class="side-menu__title">
-                  <span></span>
-                  <img src="./assets/images/common/page-blog-miniicon.png" alt="見出しのアイコン">
-                  <h3 class="side-menu__name">人気記事</h3>
+                <div class="side-menu__title-wrap">
+                  <div class="side-menu__title">
+                    <span></span>
+                    <img src="./assets/images/common/page-blog-miniicon.png" alt="見出しのアイコン">
+                    <h3 class="side-menu__name">人気記事</h3>
+                  </div>
                 </div>
                 <div class="side-menu__ranking-list">
                   <div class="side-menu__ranking-item">
@@ -391,28 +393,17 @@
                   <img src="./assets/images/common/page-blog-miniicon.png" alt="見出しのアイコン">
                   <h3 class="side-menu__name">アーカイブ</h3>
                 </div>
-                <div class="side-menu__archive-list">
-                  <div class="side-menu__archive-item">
-                    <span class="side-menu__triangle triangle-bottom"></span>
-                    <a class="side-menu__archive-link" href="#">2023</a>
-                  </div>
-                  <div class="side-menu__archive-item">
-                    <span class="side-menu__triangle triangle-right"></span>
-                    <a class="side-menu__archive-link" href="#">3月</a>
-                  </div>
-                  <div class="side-menu__archive-item">
-                    <span class="side-menu__triangle triangle-right"></span>
-                    <a class="side-menu__archive-link" href="#">2月</a>
-                  </div>
-                  <div class="side-menu__archive-item">
-                    <span class="side-menu__triangle triangle-right"></span>
-                    <a class="side-menu__archive-link" href="#">1月</a>
-                  </div>
-                  <div class="side-menu__archive-item">
-                    <span class="side-menu__triangle triangle-right2"></span>
-                    <a class="side-menu__archive-link" href="#">2022</a>
-                  </div>
-                </div>
+                <ul class="side-menu__archive-list">
+                  <li class="side-menu__year js-year">
+                    2023
+                    <ul class="side-menu__month  js-month">
+                      <li class="side-menu__month-tag">3月</li>
+                      <li class="side-menu__month-tag">2月</li>
+                      <li class="side-menu__month-tag">1月</li>
+                    </ul>
+                  </li>
+                  <li class="side-menu__year js-year">2022</li>
+                </ul>
               </div>
             </div>
           </aside>
