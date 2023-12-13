@@ -33,8 +33,24 @@
   }
 }
 
-.page-contact__check-box {
+
+.page-contact__text {
   font-size: rem(14);
+  line-height: calc(22/14);
+  text-align: left;
+  margin-left: rem(8);
+  @include mq("md") {
+    text-align: center;
+    margin-left: rem(16);
+  }
+}
+
+.page-contact__button {
+  margin-top: rem(24);
+  text-align: center;
+  @include mq("md") {
+    margin-top: rem(40);
+  }
 }
 
 .page-contact__checkbox {
@@ -50,15 +66,36 @@
   }
 }
 
-.page-contact__box {
-  position: relative;
+.page-contact__checkbox label {
   display: block;
-  @include mq("md"){
+  @include mq("md") {
     display: inline-block;
   }
 }
 
-.page-contact__box::after {
+.page-contact__checkbox input {
+	display: none;
+  cursor: pointer;
+  display: inline-block;
+  padding-left: rem(25);
+  position: relative;
+}
+
+
+.page-contact__checkbox input::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border: 1px solid $green;
+  display: block;
+  width: rem(22);
+  height: rem(22);
+}
+
+
+.page-contact__checkbox input::after {
   content: "";
   margin-top: rem(-2);
   position: absolute;
@@ -74,34 +111,6 @@
   opacity: 0;
 }
 
-.page-contact__box:checked {
+.page-contact__checkbox input:checked::after {
   opacity: 1;
 }
-
-.page-contact__text {
-  font-size: rem(14);
-  line-height: calc(22/14);
-  text-align: left;
-  margin-left: rem(8);
-  @include mq("md") {
-    text-align: center;
-    margin-left: rem(16);
-  }
-}
-
-.page-contact__box {
-  width: rem(22);
-  height: rem(22);
-  border: 1px solid $green;
-}
-
-.page-contact__button {
-  margin-top: rem(24);
-  text-align: center;
-  @include mq("md") {
-    margin-top: rem(40);
-  }
-}
-
-
-

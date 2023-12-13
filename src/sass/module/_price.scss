@@ -13,8 +13,7 @@
   margin-inline: auto;
   @include mq("md") {
     grid-template-columns: 1fr 1fr;
-    row-gap: 0;
-    column-gap: rem(93);
+    gap: rem(40) rem(93);
     margin-top: rem(39);
   }
 }

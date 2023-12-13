@@ -141,7 +141,7 @@
       <div class="sub-mv__inner">
         <picture class="sub-mv__image">
           <source srcset="./assets/images/common/page-campaign-pc.jpg" media="(min-width: 1024px)">
-          <img src="./assets/images/common/page-campaign-sp.jpg"  alt="ダイビングしている様子">
+          <img src="./assets/images/common/page-campaign-sp.jpg"  alt="ダイビングしている様子" width="1440" height="548">
         </picture>
         <h2 class="sub-mv__title">Campaign</h2>
       </div>
@@ -155,12 +155,12 @@
     <!-- キャンペーン -->
     <section class="page-campaign layout-page-campaign">
       <div class="page-campaign__inner inner">
-        <ul class="page-campaign__tab tab-items">
-          <li class="tab-items__item active" data-filter="campaign-tab01">ALL</li>
-          <li class="tab-items__item" data-filter="campaign-tab02">ライセンス講習</li>
-          <li class="tab-items__item" data-filter="campaign-tab03">ファンダイビング</li>
-          <li class="tab-items__item" data-filter="campaign-tab04">体験ダイビング</li>
-        </ul>
+        <div class="page-campaign__tab tab-items">
+          <a class="tab-items__item active" data-filter="campaign-tab01">ALL</a>
+          <a class="tab-items__item" data-filter="campaign-tab02">ライセンス講習</a>
+          <a class="tab-items__item" data-filter="campaign-tab03">ファンダイビング</a>
+          <a class="tab-items__item" data-filter="campaign-tab04">体験ダイビング</a>
+        </div>
         <div class="page-campaign__cards page-campaign-cards">
           <div class="page-campaign-cards__card  campaign-card" data-category="campaign-tab02">
             <div class="campaign-card__body">
@@ -267,16 +267,16 @@
             </div>
           </div>
         </div>
-        <ol class="pagination">
-          <li class="prev"><a href="#">＜</a></li>
-          <li class="current"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li class="u-desktop"><a href="#">5</a></li>
-          <li class="u-desktop"><a href="#">6</a></li>
-          <li class="next"><a href="#">＞</a></li>
-      </ol>
+        <div class="pagination">
+          <a class="prev" href="#">＜</a>
+          <span class="current">1</span>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a class="u-desktop" href="#">5</a>
+          <a class="u-desktop" href="#">6</a>
+          <a class="next" href="#">＞</a>
+        </div>
       </div>
     </section>
 

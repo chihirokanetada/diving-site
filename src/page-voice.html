@@ -141,7 +141,7 @@
       <div class="sub-mv__inner">
         <picture class="sub-mv__image">
           <source srcset="./assets/images/common/page-voice-pc.jpg" media="(min-width: 1024px)">
-          <img src="./assets/images/common/page-voice-sp.jpg"  alt="ダイビングしている様子">
+          <img src="./assets/images/common/page-voice-sp.jpg"  alt="ダイビングしている様子" width="1440" height="548">
         </picture>
         <h2 class="sub-mv__title">Voice</h2>
       </div>
@@ -155,12 +155,12 @@
     <!-- voice-->
     <div class="page-voice layout-page-voice">
       <div class="page-voice__inner inner">
-        <ul class="page-voice__tab tab-items">
-          <li class="tab-items__item active" data-filter="voice-tab01">ALL</li>
-          <li class="tab-items__item" data-filter="voice-tab02">ライセンス講習</li>
-          <li class="tab-items__item" data-filter="voice-tab03">ファンダイビング</li>
-          <li class="tab-items__item" data-filter="voice-tab04">体験ダイビング</li>
-        </ul>
+        <div class="page-voice__tab tab-items">
+          <a class="tab-items__item active" data-filter="voice-tab01">ALL</a>
+          <a class="tab-items__item" data-filter="voice-tab02">ライセンス講習</a>
+          <a class="tab-items__item" data-filter="voice-tab03">ファンダイビング</a>
+          <a class="tab-items__item" data-filter="voice-tab04">体験ダイビング</a>
+        </div>
         <div class="page-voice__cards voice-cards">
           <a href="#" class="voice-cards__item voice-card" data-category="voice-tab02">
             <div class="voice-card__content">
@@ -259,16 +259,16 @@
             <div class="voice-card__text">ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。</div>
           </a>
         </div>
-        <ol class="pagination">
-          <li class="prev"><a href="#">＜</a></li>
-          <li class="current"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li class="u-desktop"><a href="#">5</a></li>
-          <li class="u-desktop"><a href="#">6</a></li>
-          <li class="next"><a href="#">＞</a></li>
-      </ol>
+        <div class="pagination">
+          <a class="prev" href="#">＜</a>
+          <span class="current">1</span>
+          <a href="#">2</a>
+          <a href="#">3</a>
+          <a href="#">4</a>
+          <a class="u-desktop" href="#">5</a>
+          <a class="u-desktop" href="#">6</a>
+          <a class="next" href="#">＞</a>
+      </div>
       </div>
     </div>
 

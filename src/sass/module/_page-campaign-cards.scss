@@ -3,11 +3,10 @@
 .page-campaign-cards {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  row-gap: rem(40);
+  gap: rem(40) rem(40);
   @include mq("md") {
     display: grid;
-    column-gap: rem(40);
-    row-gap: rem(80);
+    gap: rem(80) rem(40);
     grid-template-columns: repeat(2, 1fr);
   }
 }

@@ -12,7 +12,8 @@
 	margin-top: rem(80);
 }
 
-.pagination a {
+.pagination a,
+.pagination span {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -23,35 +24,31 @@
 	height: rem(38);
 	border: 1px solid $green;
 	color: $green;
-	// background-color: $white;
-	transition: 0.3s;
+	transition: 0.2s ease-in-out;
+	cursor: pointer;
 }
 
-.pagination:hover {
-	opacity: 0.7;
-	// background-color: $green;
-}
 
 .pagination a:not(:hover) {
 	text-decoration: none;
 }
 
-.pagination .current a {
+.pagination span.current {
 	background-color: $green;
 	color: $white;
 	pointer-events: none;
 	margin-left: rem(28);
 }
 
-.pagination .next a {
+.pagination a.next {
 	margin-left: rem(28);
 }
 
-.pagination-detail .next a {
+.pagination-detail a.next {
 	margin-left: rem(70);
 }
 
-.pagination  a:hover,
+.pagination a:hover,
 .pagination .prev a:hover,
 .pagination .next a:hover {
 	background-color: $green;

@@ -5,17 +5,16 @@
 	display: flex;
 	margin-inline: auto;
 	justify-content:center;
-	column-gap: rem(21);
-	row-gap: rem(16);
+	gap: rem(16) rem(21);
 	flex-wrap: wrap;
 	@include mq("md") {
 		justify-content:flex-start;
-		column-gap: rem(32);
-		row-gap: 0;
+		gap: rem(16) rem(32);
   }
 }
 
 .tab-items__item {
+	display: block;
 	font-size: rem(14);
 	font-family: $base-font-family;
 	line-height: calc(22 /14);
@@ -33,6 +32,13 @@
 	justify-content: center;
 	align-items: center;
 	cursor: pointer;
+  transition: all .3s;
+}
+
+.tab-items__item:not(.active) {
+  color: $green; /* アクティブでない場合の文字色 */
+  background-color: $white; /* アクティブでない場合の背景色 */
+  border: 1px solid $green; /* アクティブでない場合のボーダー色 */
 }
 
 .tab-items__item.active {
@@ -40,6 +46,10 @@
 	background-color: $green;
 }
 
+.tab-items__item a:hover {
+	transition: 0.3s;
+}
+
 .tab-items__item:hover {
-	opacity: 0.8;
+  transition: 0.3s
 }

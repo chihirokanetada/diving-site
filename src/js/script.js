@@ -1,20 +1,20 @@
 jQuery(function ($) {
-  // この中であればWordpressでも「$」が使用可能になる
-  // ハンバーガーメニュー
+    // この中であればWordpressでも「$」が使用可能になる
+    // ハンバーガーメニュー
   $(".js-hamburger,.js-drawer").click(function () {
     $(".js-hamburger").toggleClass("is-open");
     $(".js-drawer").fadeToggle();
     $("body").toggleClass("active");
   });
 
-  //ドロワーメニュー
+    //ドロワーメニュー
   $("#MenuButton").click(function () {
     $(".js-drawer").toggleClass("is-open");
     $(".drawer-menu").toggleClass("is-open");
     $("html").toggleClass("is-fixed");
   });
 
-  // mvスワイパー
+    // mvスワイパー
   const swiper1 = new Swiper(".js-mv-swiper", {
     loop: true,
     effect: "fade",
@@ -25,7 +25,7 @@ jQuery(function ($) {
     },
   });
 
-  // campaignスワイパー
+    // campaignスワイパー
   const swiper2 = new Swiper(".js-campaign-swiper", {
     spaceBetween: 24,
     loop: true,
@@ -50,7 +50,7 @@ jQuery(function ($) {
     },
   });
 
-  // ページトップ
+    // ページトップ
   const pageTop = $(".js-page-top");
   pageTop.hide();
   $(window).scroll(function () {
@@ -138,48 +138,78 @@ jQuery(function ($) {
   });
 
   //  アコーディオン
-  $('.js-page-faq-question').click(function() {
-    $(this).toggleClass('selected');
-    $(this).next().slideToggle();
+  // クラスが "toggle" に設定された要素を表示する
+  $(document).ready(function() {
+    $(".toggle").show();
+    // クラスが "js-page-faq-question" に設定された要素がクリックされた時の処理を設定
+    $(".js-page-faq-question").each(function() {
+      // クリックされた質問に対応する回答をスライドトグル表示
+      $(this).next().slideToggle();
+      // クリックされた質問の "selected" クラスをトグル切り替え
+      $(this).addClass("selected");
+    });
+    // クラスが "js-page-faq-question" に設定された要素がクリックされた時の処理を設定
+    $(".js-page-faq-question").on("click", function() {
+       // クリックされた質問に対応する回答をスライドトグル表示
+      $(this).next().slideToggle();
+      // クリックされた質問の "selected" クラスをトグル切り替え
+      $(this).toggleClass("selected");
+    });
   });
 
   // campaignとvoiceの上部のタブ
-  var newsLink = $(".page-campaign__tab li");
-	var limit = 6;
-	$(".page-campaign-cards__card").css('display','none');
-	for(var i = 0 ; i < limit ; i++) {
-		var limitNews = $(".page-campaign-cards__card")[i];
-		$(limitNews).fadeIn();
-	}
-	$(newsLink).click(function(){
-		$(newsLink).removeClass("active");
-		$(this).addClass("active");
-		var btnFilter = $(this).attr('data-filter');
-		if (btnFilter == 'campaign-tab01') {
-			$(".page-campaign-cards__card").css('display','none');
-			for(i = 0 ; i < limit ; i++) {
-				limitNews = $(".page-campaign-cards__card")[i];
-				$(limitNews).fadeIn();
-			}
-		} else {
-			$(".page-campaign-cards__card").css('display','none');
-			for(i = 0 ; i < limit ; i++) {
-				limitNews = $(".page-campaign-cards__card").filter('[data-category = "' + btnFilter + '"]')[i];
-				$(limitNews).fadeIn();
-			}
-		}
-	});
-});
+  // var newsLink = $(".page-campaign__tab a");
+  // var limit = 10;
+  // $(".page-campaign-cards__card").css('display','none');
+  //   for(var i = 0 ; i < limit ; i++) {
+  //     var limitNews = $(".page-campaign-cards__card")[i];
+  //     $(limitNews).fadeIn();
+  //   }
+  //   $(newsLink).click(function(){
+  //     $(newsLink).removeClass("active");
+  //     $(this).addClass("active");
+  //     var btnFilter = $(this).attr('data-filter');
+  //     if (btnFilter == 'voice-tab01') {
+  //       $(".page-campaign-cards__card").css('display','none');
+  //       for(i = 0 ; i < limit ; i++) {
+  //         limitNews = $(".page-campaign-cards__card")[i];
+  //         $(limitNews).fadeIn();
+  //       }
+  //     } else {
+  //       $(".page-voice-cards__card").css('display','none');
+  //       for(i = 0 ; i < limit ; i++) {
+  //         limitNews = $(".page-campaign-cards__card").filter('[data-category = "' + btnFilter + '"]')[i];
+  //         $(limitNews).fadeIn();
+  //       }
+  //     }
+  //   });
 
-$(function() {
-  var newsLink = $(".page-voice__tab li");
+  $(document).ready(function () {
+    var newsLinks = $(".tab-items__item");
+    newsLinks.click(function () {
+      // クリックされたタブに.activeクラスを追加し、他のタブからは削除する
+      newsLinks.removeClass("active");
+      $(this).addClass("active");
+      // クリックされたタブのdata-filter属性を取得
+      // var btnFilter = $(this).attr('data-filter');
+      // タブに対応するコンテンツを表示するか非表示にする
+      if (btnFilter === 'campaign-tab01') {
+        $(".page-campaign-cards__card").fadeIn();
+      } else {
+        $(".page-campaign-cards__card").css('display', 'none');
+        $(".page-campaign-cards__card[data-category='" + btnFilter + "']").fadeIn();
+      }
+    });
+  });
+
+  var newsLink = $(".page-voice__tab a");
 	var limit = 10;
 	$(".voice-cards__item").css('display','none');
 	for(var i = 0 ; i < limit ; i++) {
 		var limitNews = $(".voice-cards__item")[i];
 		$(limitNews).fadeIn();
-	}
-	$(newsLink).click(function(){
+  }
+  $(newsLink).click(function(){
 		$(newsLink).removeClass("active");
 		$(this).addClass("active");
 		var btnFilter = $(this).attr('data-filter');
@@ -190,9 +220,9 @@ $(function() {
 				$(limitNews).fadeIn();
 			}
 		} else {
-			$(".page-voice-cards__card").css('display','none');
+      $(".page-voice-cards__card").css('display','none');
 			for(i = 0 ; i < limit ; i++) {
-				limitNews = $(".page-voice-cards__card").filter('[data-category = "' + btnFilter + '"]')[i];
+        limitNews = $(".page-voice-cards__card").filter('[data-category = "' + btnFilter + '"]')[i];
 				$(limitNews).fadeIn();
 			}
 		}
@@ -208,7 +238,6 @@ $(function() {
     $("#grayDisplay").fadeOut(200);
     return false;
   });
-});
 
   // informationの上部のタブ
   $('.js-tab-menu').on('click', function () {
@@ -218,4 +247,4 @@ $(function() {
     var number = $(this).data("number");
     $('#' + number).addClass('is-active');
   });
-
+});
