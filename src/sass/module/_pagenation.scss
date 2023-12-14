@@ -55,9 +55,9 @@
 	color: $white;
 }
 
-.pagination a.u-desktop {
-	display: block;
+.pagination.u-desktop {
+	display: none;
   @include mq("md") {
-		display: none;
+		display: block
   }
 }
