@@ -158,32 +158,6 @@ jQuery(function ($) {
   });
 
   // campaignとvoiceの上部のタブ
-  // var newsLink = $(".page-campaign__tab a");
-  // var limit = 10;
-  // $(".page-campaign-cards__card").css('display','none');
-  //   for(var i = 0 ; i < limit ; i++) {
-  //     var limitNews = $(".page-campaign-cards__card")[i];
-  //     $(limitNews).fadeIn();
-  //   }
-  //   $(newsLink).click(function(){
-  //     $(newsLink).removeClass("active");
-  //     $(this).addClass("active");
-  //     var btnFilter = $(this).attr('data-filter');
-  //     if (btnFilter == 'voice-tab01') {
-  //       $(".page-campaign-cards__card").css('display','none');
-  //       for(i = 0 ; i < limit ; i++) {
-  //         limitNews = $(".page-campaign-cards__card")[i];
-  //         $(limitNews).fadeIn();
-  //       }
-  //     } else {
-  //       $(".page-voice-cards__card").css('display','none');
-  //       for(i = 0 ; i < limit ; i++) {
-  //         limitNews = $(".page-campaign-cards__card").filter('[data-category = "' + btnFilter + '"]')[i];
-  //         $(limitNews).fadeIn();
-  //       }
-  //     }
-  //   });
-
   $(document).ready(function () {
     var newsLinks = $(".tab-items__item");
     newsLinks.click(function () {
@@ -239,16 +213,6 @@ jQuery(function ($) {
     return false;
   });
 
-  // informationの上部のタブ
-  $('.js-tab-menu').on('click', function () {
-    $('.js-tab-menu').removeClass('is-active');
-    $('.js-tab-content').removeClass('is-active');
-    $(this).addClass('is-active');
-    var number = $(this).data("number");
-    $('#' + number).addClass('is-active');
-  });
-
-
   // アーカイブアコーディオン
   $(".side-menu__year.js-year").on("click", function () {
     // クリックされた年に関連する月のリストを探し、スライドトグルで表示・非表示を切り替える
@@ -266,57 +230,53 @@ jQuery(function ($) {
     $(".js-tab-menu [href='" + targetHash + "']").addClass("is-active");
   });
 
+  // informationの上部のタブ
+  $('.js-tab-menu').on('click', function () {
+    $('.js-tab-menu').removeClass('is-active');
+    $('.js-tab-content').removeClass('is-active');
+    var number = $(this).data("number");
+    $(this).addClass('is-active');
+    var number = $(this).data("number");
+    $('#' + 'tab__menu-' + number).addClass('is-active');
+  });
 
-
-  // $(".nav__title--sub a").on("click", function (event) {
-  //   var targetHash = $(this).attr("href");
-  //   // Check if targetHash is "#" and prevent default behavior
-  //   if (targetHash === "#") {
-  //       event.preventDefault();
-  //       return;
-  //   }
-  //   $(".js-tab-menu").removeClass("is-active");
-  //   $(".js-tab-content").removeClass("is-active");
-  //   $(targetHash).addClass("is-active");
-  //   $(".js-tab-menu [href='" + targetHash + "']").addClass("is-active");
-  // });
-
-
-
-
-  // $(".nav__title--sub a").on("click", function (event) {
-  //   // Prevent default behavior for all anchor links
-  //   event.preventDefault();
-
-  //   // Get the href attribute of the clicked anchor
-  //   var targetHash = $(this).attr("href");
-
-  //   // Check if targetHash is "#" and return
-  //   if (targetHash === "#") {
-  //       return;
-  //   }
-
-  //   // Remove the "is-active" class from all menu items and content items
-  //   $(".js-tab-menu").removeClass("is-active");
-  //   $(".js-tab-content").removeClass("is-active");
-
-  //   // Add the "is-active" class to the clicked menu item and corresponding content item
-  //   $(this).addClass("is-active");
-  //   $(targetHash).addClass("is-active");
-  // });
-
-
-//   $(".nav__title--sub a").on("click", function (event) {
-//     event.preventDefault();
-
-//     var targetHash = $(this).attr("href");
-//     console.log("targetHash:", targetHash);
-//     if (targetHash === "#") {
-//       return;
-//   }
-//   $(".js-tab-menu").removeClass("is-active");
-//   $(".js-tab-content").removeClass("is-active");
-//   $(this).addClass("is-active");
-//   $(targetHash).addClass("is-active");
-// });
+  //タブへダイレクトリンクの実装
+    //リンクからハッシュを取得
+    var hash = location.hash;
+    hash = (hash.match(/^#tab__menu-\d+$/) || [])[0];
+    //リンクにハッシュが入っていればtabnameに格納
+    if ($(hash).length) {
+        var tabname = hash.slice(1);
+    } else {
+        var tabname = "tab__menu-1";
+    }
+    //コンテンツ非表示・タブを非アクティブ
+    $(".page-information__tab .js-tab-menu").removeClass("is-active");
+    $(".page-information__tab .js-tab-content ").removeClass("is-active");
+    //何番目のタブかを格納
+    var tabno = $(".page-information__tab .tab__content-item#" + tabname).index();
+    //コンテンツ表示
+    $(".page-information__tab .js-tab-content").eq(tabno).addClass("is-active");
+    //タブのアクティブ化
+    $(".page-information__tab .js-tab-menu").eq(tabno).addClass("is-active");
 });
+
+// campaignとvoiceの上部のタブ
+$(document).ready(function () {
+  var newsLinks = $(".tab-items__item");
+  newsLinks.click(function () {
+    // クリックされたタブに.activeクラスを追加し、他のタブからは削除する
+    newsLinks.removeClass("active");
+    $(this).addClass("active");
+    // クリックされたタブのdata-filter属性を取得
+    // var btnFilter = $(this).attr('data-filter');
+    // タブに対応するコンテンツを表示するか非表示にする
+    if (btnFilter === 'campaign-tab01') {
+      $(".page-campaign-cards__card").fadeIn();
+    } else {
+      $(".page-campaign-cards__card").css('display', 'none');
+      $(".page-campaign-cards__card[data-category='" + btnFilter + "']").fadeIn();
+    }
+  });
+});
+
